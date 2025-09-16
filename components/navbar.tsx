@@ -30,7 +30,10 @@ export const Navbar = () => {
             <Logo />
           </NextLink>
         </NavbarBrand>
-        <div className="hidden lg:flex gap-4 justify-start ml-2">
+      </NavbarContent>
+      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="start">
+        <div className="flex gap-4 justify-start ml-2">
+          <Divider orientation="vertical" />
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -52,7 +55,7 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="gap-2">
           <Link isExternal href={siteConfig.links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
           </Link>

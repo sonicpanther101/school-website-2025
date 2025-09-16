@@ -8,7 +8,7 @@ export const Logo: React.FC<IconSvgProps> = ({
   ...props
 }) => (
   <img
-    className="h-[64px]"
+    className="h-[65px] w-auto"
     alt="Marlborough Tramps Logo"
     src="https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/Marlborough%20Tramps%20logo.jpg"
   />
