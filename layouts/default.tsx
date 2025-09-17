@@ -4,7 +4,7 @@ import { Head } from "./head";
 
 import { Navbar } from "@/components/navbar";
 
-import { Footer } from "@/components/footer";
+// import { Footer } from "@/components/footer";
 
 export default function DefaultLayout({
   children,
@@ -18,7 +18,7 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
