@@ -8,6 +8,8 @@
   - [ ] Tramping advise - gear
   - [ ] Privacy policy
   - [ ] Community
+  - [x] Navbar
+  - [ ] Footer
 
 - [ ] Responsive pages:
   - [ ] Home
@@ -15,6 +17,8 @@
   - [ ] Tramping advise
   - [ ] Privacy policy
   - [ ] Community
+  - [x] Navbar
+  - [ ] Footer
 
 - [ ] Features:
   - [ ] Form to sign up to group tramps
