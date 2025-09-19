@@ -2,7 +2,7 @@ import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@her
 
 export const Footer = () => {
   return (
-    <Card className="flex flex-col sm:flex-row p-[10px] gap-3">
+    <Card className="flex flex-col sm:flex-row p-[10px] gap-3 flex-none">
       <Card className="flex-2">
         <CardBody className="flex flex-col gap-3">
           <div className="flex flex-col sm:flex-row gap-3">

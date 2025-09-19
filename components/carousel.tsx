@@ -48,7 +48,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   return (
-    <section className="max-w-[48rem] m-auto [--slide-height:19rem] [--slide-spacing:1rem] [--slide-size:100%]">
+    <section className="max-w-[100vw] m-auto [--slide-height:35rem] [--slide-spacing:0rem] [--slide-size:100%]">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex touch-action-[pan-y_pinch-zoom] ml-[calc(var(--slide-spacing)*-1)]">
           {slides.map((index) => (

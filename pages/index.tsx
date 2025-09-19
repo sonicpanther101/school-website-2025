@@ -19,6 +19,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />      
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />      
     </DefaultLayout>
   );
 }
