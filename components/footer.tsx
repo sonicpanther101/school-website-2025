@@ -39,7 +39,7 @@ export const Footer = () => {
           About
         </CardHeader>
         <CardBody className="flex gap-3 flex-col">
-          <Link underline="active" href="/about_us">
+          <Link underline="active" href="/about">
             About Us
           </Link>
           <Link underline="active" href="/FAQ">
@@ -52,8 +52,8 @@ export const Footer = () => {
           Legal
         </CardHeader>
         <CardBody>
-          <Link underline="active" href="/FAQ">
-            FAQ
+          <Link underline="active" href="/privacy">
+            Privacy
           </Link>
         </CardBody>
       </Card>
