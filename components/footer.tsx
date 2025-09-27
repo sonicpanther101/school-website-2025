@@ -2,7 +2,7 @@ import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@her
 
 export const Footer = () => {
   return (
-    <Card className="flex flex-col sm:flex-row p-[10px] gap-3 flex-none">
+    <Card className="flex flex-col sm:flex-row p-[10px] gap-3 flex-none rounded-b-none">
       <Card className="flex-2">
         <CardBody className="flex flex-col gap-3">
           <div className="flex flex-col sm:flex-row gap-3">
@@ -34,25 +34,25 @@ export const Footer = () => {
           </div>
         </CardBody>
       </Card>
-      <Card className="flex-1">
+      <Card className="sm:flex-1 flex-0.85">
         <CardHeader>
           About
         </CardHeader>
         <CardBody className="flex gap-3 flex-col">
-          <Link underline="active" href="/about">
-            About Us
+          <Link underline="active" href="/#about">
+            About
           </Link>
-          <Link underline="active" href="/FAQ">
+          <Link underline="active" href="/#FAQ">
             FAQ
           </Link>
         </CardBody>
       </Card>
-      <Card className="flex-1">
+      <Card className="sm:flex-1 flex-0.75">
         <CardHeader>
           Legal
         </CardHeader>
         <CardBody>
-          <Link underline="active" href="/privacy">
+          <Link underline="active" href="/#privacy">
             Privacy
           </Link>
         </CardBody>
