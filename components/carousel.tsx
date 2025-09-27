@@ -14,16 +14,10 @@ const imageURLs = [
   "children.jpg",
   "cliffs.jpg",
   "ferry-4248163_1920.jpg",
-  "green_hills.jpg",
   "hiking_landscape_route_da.jpg",
   "hiking-mountain.jpg",
   "mark-de-jong-q8n0lHbqrIE-unsplash.jpg",
-  "mountain_hiking_hike_hiking_0.jpg",
   "pelorus_river.jpg",
-  "rivers_streams_coastline_shoreline.jpg",
-  "stream_barren_scenery.jpg",
-  "streams_moss_water_forests.jpg",
-  "wine-1889762_1280.jpg",
 ]
 
 const imageAlts = [
@@ -31,35 +25,37 @@ const imageAlts = [
   "children",
   "cliffs",
   "ferry",
-  "green hills",
   "hiking landscape route",
   "hiking mountain",
   "mark de jong unsplash",
-  "mountain hiking hike hiking ",
   "pelorus river",
-  "rivers streams coastline shoreline",
-  "stream barren scenery",
-  "streams moss water forests",
-  "wine ",
 ]
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ delay: 200000 })])
 
   return (
-    <section className="max-w-[100vw] m-auto [--slide-height:35rem] [--slide-spacing:0rem] [--slide-size:100%]">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-action-[pan-y_pinch-zoom] ml-[calc(var(--slide-spacing)*-1)]">
+    <section className="w-screen h-screen">
+      <div className="overflow-hidden h-full" ref={emblaRef}>
+        <div className="flex touch-action-[pan-y_pinch-zoom] h-full">
           {slides.map((index) => (
-            <div className="transform translate-x-0 translate-y-0 translate-z-0 flex-[0_0_var(--slide-size)] min-w-0 pl-[var(--slide-spacing)]" key={index}>
-              <div className="[box-shadow:inset_0_0_0_0.2rem_var(--detail-medium-contrast)] rounded-[1.8rem] text-[4rem] font-semibold flex items-center justify-center h-[var(--slide-height)] select-none">
-                <Image
-                  alt={imageAlts[index]}
-                  radius="sm"
-                  src={"https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/" + imageURLs[index]}
-                />
-              </div>
+            <div
+              className="flex-[0_0_100%] min-w-0 w-full h-full relative"
+              key={index}
+            >
+              <Image
+                alt={imageAlts[index]}
+                src={
+                  "https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/" +
+                  imageURLs[index]
+                }
+                radius='none'
+                classNames={{
+                  img: "w-full h-full object-cover",
+                  wrapper: "w-full h-full",
+                }}
+              />
             </div>
           ))}
         </div>

@@ -1,14 +1,17 @@
 import * as React from "react";
 
 import { IconSvgProps } from "@/types";
+import { Image } from "@heroui/react";
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
   height,
   ...props
 }) => (
-  <img
+  <Image
     className="h-[65px] w-auto"
+    radius="none"
+    loading="eager"
     alt="Marlborough Tramps Logo"
     src="https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/Marlborough%20Tramps%20logo.jpg"
   />

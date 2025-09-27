@@ -22,6 +22,7 @@
     "@heroui/system": "2.4.22",
     "@heroui/theme": "2.4.22",
     "@react-aria/visually-hidden": "3.8.27",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "clsx": "2.1.1",
     "embla-carousel-autoplay": "^8.6.0",
