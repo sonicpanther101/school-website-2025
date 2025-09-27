@@ -25,8 +25,7 @@ export default function Community() {
           }
           style={{ transform: "translateZ(0)" }}
           alt="Background image"
-          // width={100}
-          className="w-full h-full object-cover fixed top-0 left-0 z-[0]"
+          className="w-full h-full object-cover fixed top-15 left-0 z-[0]"
         />
         <CardBody>
           <Card className="mb-6 self-center">
@@ -35,7 +34,7 @@ export default function Community() {
             </CardHeader>
             <CardBody>
               <b>Rules:</b>
-              <ul className="list-disc pl-6">
+              <ul className="pl-6">
                 <li>
                   Be respectful towards others: no insults, personal attacks, or
                   hate speech.

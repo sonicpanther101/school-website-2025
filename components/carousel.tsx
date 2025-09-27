@@ -1,12 +1,18 @@
-import React from "react";
-import { EmblaOptionsType } from "embla-carousel";
+import React, { useCallback } from 'react'
+import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { Image } from "@heroui/react";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons
+} from './carousel arrow buttons'
 
 type PropType = {
   slides: number[];
   options?: EmblaOptionsType;
+  arrows?: boolean;
 };
 
 const imageURLs = [
@@ -32,10 +38,29 @@ const imageAlts = [
 ];
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
-  const [emblaRef] = useEmblaCarousel(options, [
+  const { slides, options, arrows } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ delay: 2000 }),
   ]);
+
+  const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
+    const autoplay = emblaApi?.plugins()?.autoplay
+    if (!autoplay) return
+
+    const resetOrStop =
+      autoplay.options.stopOnInteraction === false
+        ? autoplay.reset
+        : autoplay.stop
+
+    resetOrStop()
+  }, [])
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
     <section className="w-screen h-screen">
@@ -62,6 +87,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ))}
         </div>
       </div>
+
+      {arrows ? (
+        <div className="absolute inset-0 flex justify-between items-center px-4 pointer-events-none">
+          <PrevButton
+            onClick={onPrevButtonClick}
+            disabled={prevBtnDisabled}
+            className="pointer-events-auto"
+          />
+          <NextButton
+            onClick={onNextButtonClick}
+            disabled={nextBtnDisabled}
+            className="pointer-events-auto"
+          />
+        </div>
+      ) : null}
+
     </section>
   );
 };

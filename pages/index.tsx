@@ -20,7 +20,7 @@ export default function IndexPage() {
       <Head />
       <Navbar />
       <main className="container mb-16 flex-grow self-center">
-        <EmblaCarousel options={OPTIONS} slides={SLIDES} />
+        <EmblaCarousel options={OPTIONS} slides={SLIDES}  />
         <EmblaCarousel options={OPTIONS} slides={SLIDES} />
 
         <Card className="m-6" id="about">
