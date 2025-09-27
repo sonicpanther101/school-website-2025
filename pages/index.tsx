@@ -68,7 +68,7 @@ export default function IndexPage() {
             <b>Q:</b> Can I use the website to promote my group tramp?
             <br />
             <b>A:</b> Yes, you can use the website to promote your group tramp
-            by posting it on our website under the "Community" section.
+            by posting it on our website under the {'"'}Community{'"'} section.
           </CardBody>
         </Card>
 

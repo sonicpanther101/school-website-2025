@@ -33,8 +33,8 @@ const imageAlts = [
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 200000 }),
+  const [emblaRef] = useEmblaCarousel(options, [
+    Autoplay({ delay: 2000 }),
   ]);
 
   return (

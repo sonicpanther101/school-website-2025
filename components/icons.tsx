@@ -4,9 +4,6 @@ import { Image } from "@heroui/react";
 import { IconSvgProps } from "@/types";
 
 export const Logo: React.FC<IconSvgProps> = ({
-  size = 36,
-  height,
-  ...props
 }) => (
   <Image
     alt="Marlborough Tramps Logo"

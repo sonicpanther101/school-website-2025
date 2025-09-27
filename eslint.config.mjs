@@ -51,6 +51,7 @@ export default defineConfig([
         "plugin:prettier/recommended",
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
+        "plugin:@next/next/recommended",
       ),
     ),
 
