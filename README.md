@@ -23,7 +23,7 @@
 - [ ] Features:
   - [ ] Form to sign up to group tramps
   - [x] Dark mode
-  - [ ] Comments [Remark42](https://remark42.com/docs/getting-started/installation/)
+  - [ ] Comments [Remark42](https://elfsightcdn.com)
 
 react framework - [NextJS](https://nextjs.org/docs/app/getting-started/installation)
 
