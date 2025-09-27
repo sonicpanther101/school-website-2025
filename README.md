@@ -3,6 +3,7 @@
 - [x] designs
 
 - [ ] Pages:
+
   - [ ] Home
   - [ ] Tramps - stats: difficulty, distance, and key features.
   - [ ] Tramping advise - gear
@@ -12,6 +13,7 @@
   - [ ] Footer
 
 - [ ] Responsive pages:
+
   - [ ] Home
   - [ ] Tramps
   - [ ] Tramping advise

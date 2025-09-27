@@ -5,10 +5,8 @@ import {
   NavbarMenuToggle,
   NavbarBrand,
   NavbarItem,
-  NavbarMenuItem,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import {Divider} from "@heroui/react";
+import { Divider } from "@heroui/react";
 import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
@@ -16,10 +14,7 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  GithubIcon,
-  Logo,
-} from "@/components/icons";
+import { GithubIcon, Logo } from "@/components/icons";
 
 export const Navbar = () => {
   return (
@@ -31,7 +26,10 @@ export const Navbar = () => {
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="start">
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full"
+        justify="start"
+      >
         <div className="flex gap-4 justify-start ml-2">
           <Divider orientation="vertical" />
           {siteConfig.navItems.map((item) => (
