@@ -1,27 +1,58 @@
-import { EmblaOptionsType } from "embla-carousel";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { Card, CardHeader, CardBody } from "@heroui/react";
 
-import EmblaCarousel from "@/components/carousel";
 import { Head } from "@/layouts/head";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 8;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from 'embla-carousel-react';
 
 export default function IndexPage() {
+
+  const [emblaRef] = useEmblaCarousel({
+    loop: true, duration: 50
+  }, [Autoplay({ delay: 3000 })])
+
+  const imageURLs = [
+    "1920-grovetown-vineyard-in-new-zealand.jpg",
+    "children.jpg",
+    "cliffs.jpg",
+    "ferry-4248163_1920.jpg",
+    "hiking_landscape_route_da.jpg",
+    "hiking-mountain.jpg",
+    "mark-de-jong-q8n0lHbqrIE-unsplash.jpg",
+    "pelorus_river.jpg",
+  ];
+
+  const imageAlts = [
+    "grovetown vineyard in new zealand",
+    "children",
+    "cliffs",
+    "ferry",
+    "hiking landscape route",
+    "hiking mountain",
+    "mark de jong unsplash",
+    "pelorus river",
+  ];
+
+  const SLIDES = Array.from(Array(8).keys());
+
   return (
     <div className="relative flex flex-col h-screen">
       <SpeedInsights />
       <Analytics />
       <Head />
       <Navbar />
-      <main className="container mb-16 flex-grow self-center">
-        <EmblaCarousel options={OPTIONS} slides={SLIDES}  />
-        <EmblaCarousel options={OPTIONS} slides={SLIDES} />
+      <main className="mb-16 flex-grow self-center">
+        <div className="w-full h-screen overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {SLIDES.map((index) => (
+              <div className="flex-[0_0_100%] h-screen bg-cover bg-center" style={{ backgroundImage: `url('https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/${imageURLs[index]}')` }}></div>
+            ))}
+          </div>
+        </div>
 
         <Card className="m-6" id="about">
           <CardHeader className="text-2xl font-bold">About</CardHeader>

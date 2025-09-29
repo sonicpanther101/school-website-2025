@@ -64,12 +64,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   return (
     <section className="w-screen h-screen">
-      <div ref={emblaRef} className="overflow-hidden h-full">
-        <div className="flex touch-action-[pan-y_pinch-zoom] h-full">
+      <div ref={emblaRef} className="overflow-hidden w-screen h-screen">
+        <div className="flex touch-action-[pan-y_pinch-zoom] w-screen h-screen">
           {slides.map((index) => (
             <div
               key={index}
-              className="flex-[0_0_100%] min-w-0 w-full h-full relative"
+              className="flex-[0_0_100%] w-screen h-screen relative"
             >
               <Image
                 alt={imageAlts[index]}

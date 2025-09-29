@@ -19,7 +19,6 @@ export default function DefaultLayout({
       <Navbar />
       <main className="container mx-auto mb-16 px-6 flex-grow pt-16">
         {" "}
-        {/* max-w-7xl */}
         {children}
       </main>
       <Footer />
