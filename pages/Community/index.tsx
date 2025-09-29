@@ -30,7 +30,7 @@ export default function Community() {
         <CardBody>
           <Card className="mb-6 self-center">
             <CardHeader className="justify-center">
-              <h1 className="text-2xl font-bold">Community</h1>
+              <h1 className="text-7xl font-bold">Community</h1>
             </CardHeader>
             <CardBody>
               <b>Rules:</b>

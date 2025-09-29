@@ -6,15 +6,19 @@ import {
   NavbarBrand,
   NavbarItem,
 } from "@heroui/navbar";
-import { Divider } from "@heroui/react";
-import { Link } from "@heroui/link";
+import { Divider, Button } from "@heroui/react";
+import { Link as HeroLink } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, Logo } from "@/components/icons";
+import { showEmailModalToast } from "./toaster";
+
 
 export const Navbar = () => {
   return (
@@ -36,8 +40,7 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  usePathname() === item.href ? "text-blue-500 text-xl" : "text-xl"
                 )}
                 color="foreground"
                 href={item.href}
@@ -53,18 +56,19 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="gap-2">
-          <Link isExternal href={siteConfig.links.github} title="GitHub">
+        <NavbarItem className="gap-2 flex">
+          <HeroLink isExternal href={siteConfig.links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
-          </Link>
+          </HeroLink>
           <ThemeSwitch />
+          <Button color="primary" size="md" className="bg-linear-to-tr from-pink-500 to-yellow-500 text-white shadow-lg mt-6 w-0 self-center text-xl px-12 my-auto" onPress={showEmailModalToast}>Join Now</Button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
+        <HeroLink isExternal href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
-        </Link>
+        </HeroLink>
         <ThemeSwitch />
         <Divider orientation="vertical" />
         <NavbarMenuToggle />
@@ -74,17 +78,18 @@ export const Navbar = () => {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
+              <Link
                 href={item.href}
+                className={clsx(
+                  "text-xl",
+                  usePathname() === item.href ? "text-blue-500 font-medium" : ""
+                )}
               >
                 {item.label}
-              </NextLink>
+              </Link>
             </NavbarItem>
           ))}
+          <Button color="primary" size="lg" className="bg-linear-to-tr from-pink-500 to-yellow-500 text-white shadow-lg mt-6 w-0 self-center text-2xl px-[4rem]" onPress={showEmailModalToast}>Join Now</Button>
         </div>
       </NavbarMenu>
     </HeroUINavbar>

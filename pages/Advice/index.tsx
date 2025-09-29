@@ -17,7 +17,7 @@ export default function Advice() {
     <DefaultLayout>
       <div className="flex flex-col gap-6">
         <Card className="self-center mb-6 p-[10px]">
-          <CardHeader className="text-2xl font-bold justify-center">Advice</CardHeader>
+          <CardHeader className="text-6xl font-bold justify-center">Advice</CardHeader>
         </Card>
         <div className="flex sm:flex-row flex-col justify-around gap-6">
           <Image

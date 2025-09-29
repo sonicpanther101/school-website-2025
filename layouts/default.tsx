@@ -1,5 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import {HeroUIProvider} from '@heroui/react'
+import {ToastProvider} from "@heroui/toast";
 
 import { Head } from "./head";
 
@@ -17,10 +19,11 @@ export default function DefaultLayout({
       <Analytics />
       <Head />
       <Navbar />
-      <main className="container mx-auto mb-16 px-6 flex-grow pt-16">
+      <main className="container mx-auto mb-16 px-6 flex-grow pt-16"><HeroUIProvider>
+        <ToastProvider placement={"bottom-center"} />
         {" "}
         {children}
-      </main>
+      </HeroUIProvider></main>
       <Footer />
     </div>
   );

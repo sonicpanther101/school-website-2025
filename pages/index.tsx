@@ -1,10 +1,14 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
-import { Card, CardHeader, CardBody } from "@heroui/react";
+import { Card, CardHeader, CardBody, CardFooter, Button, HeroUIProvider } from "@heroui/react";
+import { ToastProvider } from "@heroui/toast";
+
+import { useState } from "react";
 
 import { Head } from "@/layouts/head";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { showEmailModalToast } from "@/components/toaster";
 
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from 'embla-carousel-react';
@@ -26,17 +30,6 @@ export default function IndexPage() {
     "pelorus_river.jpg",
   ];
 
-  const imageAlts = [
-    "grovetown vineyard in new zealand",
-    "children",
-    "cliffs",
-    "ferry",
-    "hiking landscape route",
-    "hiking mountain",
-    "mark de jong unsplash",
-    "pelorus river",
-  ];
-
   const SLIDES = Array.from(Array(8).keys());
 
   return (
@@ -45,7 +38,16 @@ export default function IndexPage() {
       <Analytics />
       <Head />
       <Navbar />
-      <main className="mb-16 flex-grow self-center">
+      <main className="mb-16 flex-grow self-center"><HeroUIProvider>
+        <ToastProvider placement={"bottom-center"} />
+        <div className="absolute w-full h-screen z-10 flex flex-col justify-center items-center">
+          <Card className="p-[10px] rounded-3xl">
+            <CardHeader><h1 className="text-5xl md:text-7xl font-black text-center select-none">Marlborough Tramps</h1></CardHeader>
+            <CardBody><h2 className="mt-4 text-lg md:text-2xl text-center select-none">Join the club and discover your local tramps.</h2></CardBody>
+            <CardFooter className="flex justify-center"><Button color="primary" size="lg" className="bg-linear-to-tr from-pink-500 to-yellow-500 text-white shadow-lg" onPress={showEmailModalToast}>Join Now</Button></CardFooter>
+          </Card>
+        </div>
+
         <div className="w-full h-screen overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {SLIDES.map((index) => (
@@ -137,7 +139,7 @@ export default function IndexPage() {
             </p>
           </CardBody>
         </Card>
-      </main>
+      </HeroUIProvider></main>
       <Footer />
     </div>
   );
