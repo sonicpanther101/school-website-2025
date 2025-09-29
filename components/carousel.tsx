@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
-import { Image } from "@heroui/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/react";
 import {
   PrevButton,
   NextButton,
@@ -10,38 +10,21 @@ import {
 } from './carousel arrow buttons'
 
 type PropType = {
-  slides: number[];
+  imageUrls: string[];
+  imageAlts: string[];
   options?: EmblaOptionsType;
+  delay: number;
   arrows?: boolean;
+  name: string;
+  description: string;
+  footer?: string;
+  folder: string;
 };
 
-const imageURLs = [
-  "1920-grovetown-vineyard-in-new-zealand.jpg",
-  "children.jpg",
-  "cliffs.jpg",
-  "ferry-4248163_1920.jpg",
-  "hiking_landscape_route_da.jpg",
-  "hiking-mountain.jpg",
-  "mark-de-jong-q8n0lHbqrIE-unsplash.jpg",
-  "pelorus_river.jpg",
-];
-
-const imageAlts = [
-  "grovetown vineyard in new zealand",
-  "children",
-  "cliffs",
-  "ferry",
-  "hiking landscape route",
-  "hiking mountain",
-  "mark de jong unsplash",
-  "pelorus river",
-];
-
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options, arrows } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 2000 }),
-  ]);
+  const { imageUrls, imageAlts, options, delay, arrows, name, description, footer, folder } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ delay: delay })])
+  const slides = Array.from(Array(imageUrls.length).keys());
 
   const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
     const autoplay = emblaApi?.plugins()?.autoplay
@@ -63,47 +46,35 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
-    <section className="w-screen h-screen">
-      <div ref={emblaRef} className="overflow-hidden w-screen h-screen">
-        <div className="flex touch-action-[pan-y_pinch-zoom] w-screen h-screen">
-          {slides.map((index) => (
-            <div
-              key={index}
-              className="flex-[0_0_100%] w-screen h-screen relative"
-            >
-              <Image
-                alt={imageAlts[index]}
-                classNames={{
-                  img: "w-full h-full object-cover",
-                  wrapper: "w-full h-full",
-                }}
-                radius="none"
-                src={
-                  "https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/" +
-                  imageURLs[index]
-                }
-              />
+    <div>
+        <h1 id="kakapo" className="text-3xl sm:text-5xl text-center select-none mt-xl">{name}</h1>
+        <div className="w-full sm:w-[120%] h-[120vh] overflow-hidden sm:ml-[-10%]" ref={emblaRef}>
+            <div className="flex">
+              {slides.map((index) => (
+                <img
+                  src={"https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/" + folder + "/" + imageUrls[index]} 
+                  alt={imageAlts[index]}
+                  className="flex-1 h-[80vh] object-cover sm:rounded-2xl m-[1rem] shadow-2xl"
+                />
+              ))}
             </div>
-          ))}
         </div>
-      </div>
-
-      {arrows ? (
-        <div className="absolute inset-0 flex justify-between items-center px-4 pointer-events-none">
-          <PrevButton
-            onClick={onPrevButtonClick}
-            disabled={prevBtnDisabled}
-            className="pointer-events-auto"
-          />
-          <NextButton
-            onClick={onNextButtonClick}
-            disabled={nextBtnDisabled}
-            className="pointer-events-auto"
-          />
-        </div>
-      ) : null}
-
-    </section>
+        <Card className="w-[95%] rounded-2xl m-[2.5%] mt-[-110%] sm:mt-[-30%] shadow-2xl p-sm mb-12">
+            <div className="flex-1 basis-[60%]">
+                <CardHeader>
+                    <h2 className="m-lg my-sm font-bold text-xl">Description</h2>
+                </CardHeader>
+                <CardBody className="min-h-[20vh]">
+                  {description.split('\\n').map((line, index) => (
+                    <p key={index}>{line}</p>
+                  ))}
+                </CardBody>
+                <CardFooter className="text-xs">
+                  {footer}
+                </CardFooter>
+            </div>
+        </Card>
+    </div>
   );
 };
 
