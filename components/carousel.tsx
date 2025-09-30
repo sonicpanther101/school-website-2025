@@ -21,6 +21,18 @@ type PropType = {
   folder: string;
 };
 
+type TrampsPropType = {
+  imageUrls: string[];
+  imageAlts: string[];
+  options?: EmblaOptionsType;
+  delay: number;
+  arrows?: boolean;
+  names: string[];
+  descriptions: string[];
+  footers: string[];
+  folders: string[];
+};
+
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { imageUrls, imageAlts, options, delay, arrows, name, description, footer, folder } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ delay: delay })])
@@ -77,13 +89,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         {/* Navigation arrows */}
         {arrows && (
           <>
-            <div className="absolute top-1/2 left-4 -translate-y-1/2 z-10 hidden sm:block bg-gray-900/65 rounded-full">
+            <div className="absolute top-1/2 left-4 -translate-y-1/2 z-10 hidden sm:block bg-gray-200/65 dark:bg-gray-900/65 rounded-full">
               <PrevButton
                 onClick={onPrevButtonClick}
                 disabled={prevBtnDisabled}
               />
             </div>
-            <div className="absolute top-1/2 right-4 -translate-y-1/2 z-10 hidden sm:block bg-gray-900/65 rounded-full">
+            <div className="absolute top-1/2 right-4 -translate-y-1/2 z-10 hidden sm:block bg-gray-200/65 dark:bg-gray-900/65 rounded-full">
               <NextButton
                 onClick={onNextButtonClick}
                 disabled={nextBtnDisabled}
@@ -111,4 +123,85 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   );
 };
 
+const TextEmblaCarousel: React.FC<TrampsPropType> = (props) => {
+  const { imageUrls, imageAlts, options, delay, arrows, names, descriptions, footers, folders } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ delay: delay })]);
+  const slides = Array.from(Array(imageUrls.length).keys());
+
+  const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
+    const autoplay = emblaApi?.plugins()?.autoplay;
+    if (!autoplay) return;
+
+    const resetOrStop =
+      autoplay.options.stopOnInteraction === false
+        ? autoplay.reset
+        : autoplay.stop;
+
+    resetOrStop();
+  }, []);
+
+  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
+    usePrevNextButtons(emblaApi, onNavButtonClick);
+
+  return (
+    <div className="relative w-full">
+      {/* Carousel wrapper */}
+      <div
+        className="w-full sm:w-[100%] h-[120vh] overflow-hidden"
+        ref={emblaRef}
+      >
+        <div className="flex">
+          {slides.map((index) => (
+            <div
+              key={index}
+              className="flex-none w-full flex flex-col items-center"
+            >
+              <img
+                src={
+                  "https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/" +
+                  folders[index] +
+                  "/" +
+                  imageUrls[index]
+                }
+                alt={imageAlts[index]}
+                className="w-full h-[80vh] object-cover sm:rounded-2xl m-[1rem] shadow-2xl"
+              />
+              {/* Card under each image */}
+              <Card className="w-[95%] rounded-2xl m-[2.5%] mt-[-10%] sm:mt-[-5%] shadow-2xl p-sm mb-12">
+                <div className="flex-1 basis-[60%]">
+                  <CardHeader>
+                    <h1 className="text-3xl sm:text-5xl text-center select-none mt-xl">
+                      {names[index]}
+                    </h1>
+                  </CardHeader>
+                  <CardBody className="min-h-[20vh]">
+                    {descriptions[index].split("\\n").map((line, lineIndex) => (
+                      <p key={lineIndex}>{line}</p>
+                    ))}
+                  </CardBody>
+                  <CardFooter className="text-xs">{footers[index]}</CardFooter>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation arrows */}
+        {arrows && (
+          <>
+            <div className="absolute top-1/2 left-4 -translate-y-1/2 z-10 hidden sm:block bg-gray-200/65 dark:bg-gray-900/65 rounded-full">
+              <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+            </div>
+            <div className="absolute top-1/2 right-4 -translate-y-1/2 z-10 hidden sm:block bg-gray-200/65 dark:bg-gray-900/65 rounded-full">
+              <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
 export default EmblaCarousel;
+export { TextEmblaCarousel };

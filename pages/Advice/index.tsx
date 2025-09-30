@@ -137,7 +137,7 @@ export default function Advice() {
           <div className="grow shrink hidden sm:block max-w-[20%]"></div>
           <Card className="h-full">
             <CardHeader className="text-2xl font-bold justify-center">Miscellaneous Advice Continued</CardHeader>
-            <CardBody className="flex  justify-center">
+            <CardBody className="flex justify-center">
               <ul className="pl-6 list-disc">
                 <li>Pack a small repair kit with duct tape, safety pins, and other basic tools.</li>
                 <li>Bring a map and compass, and know how to use them.</li>

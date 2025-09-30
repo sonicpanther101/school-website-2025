@@ -59,7 +59,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="appearance-none bg-transparent touch-manipulation inline-flex cursor-pointer border-0 p-0 m-0 shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] w-[3.6rem] h-[3.6rem] z-[1] rounded-full text-[var(--text-body)] flex items-center justify-center tap-highlight-transparent"
+      className="appearance-none bg-transparent touch-manipulation inline-flex cursor-pointer border-0 p-0 m-0 shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] w-[3.6rem] h-[3.6rem] z-[1] rounded-full flex items-center justify-center tap-highlight-transparent"
       type="button"
       {...restProps}
     >
@@ -79,7 +79,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="appearance-none bg-transparent touch-manipulation inline-flex cursor-pointer border-0 p-0 m-0 shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] w-[3.6rem] h-[3.6rem] z-[1] rounded-full text-[var(--detail-high-contrast)] flex items-center justify-center"
+      className="appearance-none bg-transparent touch-manipulation inline-flex cursor-pointer border-0 p-0 m-0 shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] w-[3.6rem] h-[3.6rem] z-[1] rounded-full flex items-center justify-center"
       type="button"
       {...restProps}
     >

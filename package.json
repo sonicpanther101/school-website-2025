@@ -9,6 +9,7 @@
     "lint": "eslint --fix"
   },
   "dependencies": {
+    "@catppuccin/palette": "^1.7.1",
     "@heroui/button": "2.2.26",
     "@heroui/code": "2.2.20",
     "@heroui/input": "2.4.27",

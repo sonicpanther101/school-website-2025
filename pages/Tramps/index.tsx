@@ -17,35 +17,35 @@ const nydiaImageAlts = [
 ];
 
 const quailImageURLs = [
-  "_OSL9608.jpg",
   "EOSL8486-1121-2.jpg",
   "Repetition.jpg",
+  "_OSL9608.jpg",
   "Sunset11.jpg",
   "wither fields.jpg",
   "Wither Hills.jpg"
 ];
 
 const quailImageAlts = [
-  "water tank",
   "looking up the hill",
   "sunset",
+  "water tank",
   "looking at blenheim from wither hills",
   "wither fields",
   "Wither Hills",
 ];
 
 const lagoonImageURLs = [
-  "wairau-lagoon-1920.jpg",
   "wairau-lagoon-2-1200.jpg",
   "wairau-lagoon-3-1200.jpg",
+  "wairau-lagoon-1920.jpg",
   "wairau-lagoon-children-1200.jpg",
   "wairau-lagoon-walkway-1200.webp"
 ];
 
 const lagoonImageAlts = [
+  "wairau lagoon",
+  "wairau lagoon",
   "wairau lagoon shipwreck",
-  "wairau lagoon",
-  "wairau lagoon",
   "wairau lagoon children",
   "wairau lagoon walkway",
 ];
@@ -77,11 +77,11 @@ export default function Tramps() {
         " footer="Image Source (Creative Commons): Wither Fields by life in still - Repetition, _OSL9608, Sunset11, EOSL8486-1121-2, Wither Hills by Ricky Wilson"
       />
       <EmblaCarousel imageUrls={lagoonImageURLs} imageAlts={lagoonImageAlts} folder="Lagoon" delay={2500} options={{ loop: true, duration: 50 }} arrows name="Wairau Lagoons" description="
-            Features: From Blenheim town centre this walk is 7km. This is one of a few places along the eastern coast of the South Island where it is possible to enjoy the richness and unique beauty of a large estuary. Many species of birds nest here and a bird book and binoculars are useful additional equipment to take! At the lagoons’ main channel the rusting hulk of the Waverley sits in the mud. There is also an interesting human history of early moa-hunter activity, Maori food gathering and later coastal trading. 
+            Features: From Blenheim town centre this walk is 7km. This is one of a few places along the eastern coast of the South Island where it is possible to enjoy the richness and unique beauty of a large estuary. Many species of birds nest here and a bird book and binoculars are useful additional equipment to take! At the lagoons' main channel the rusting hulk of the Waverley sits in the mud. There is also an interesting human history of early moa-hunter activity, Maori food gathering and later coastal trading. 
           \nWhere: Wairau Lagoons Reserve, 7km southeast of Blenheim. 
           \nWalking Time: Lagoon loop track from car park 3 hour circuit (8km) Plus side-track from “Waverley” wreck 45 minutes return (2km) 
           \nGrade: Walking track — virtually flat (not recommended after heavy rain as surface water can be ankle deep in places, nor in very hot or windy weather as this is an extremely exposed area).
-        " footer="Image Source (Creative Commons): Wairau Lagoons Walkway, Wairau Lagoons Children by Benhi Dixon - Wairau Lagoons Walkway, Rusting remains of the Waverley ship on the Wairau Lagoons Walkway by Ricky Wilson"
+        " footer="Image Source (Creative Commons): Wairau Lagoons Walkway, Wairau Lagoons Children by Benhi Dixon - Wairau Lagoons, Rusting remains of the Waverley ship on the Wairau Lagoons Walkway by Ricky Wilson"
       />
     </DefaultLayout>
   );

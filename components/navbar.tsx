@@ -40,7 +40,7 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  usePathname() === item.href ? "text-blue-500 text-xl" : "text-xl"
+                  usePathname() === item.href ? "text-primary text-xl" : "text-xl"
                 )}
                 color="foreground"
                 href={item.href}
@@ -61,7 +61,7 @@ export const Navbar = () => {
             <GithubIcon className="text-default-500" />
           </HeroLink>
           <ThemeSwitch />
-          <Button color="primary" size="md" className="bg-linear-to-tr from-pink-500 to-yellow-500 text-white shadow-lg mt-6 w-0 self-center text-xl px-12 my-auto" onPress={showEmailModalToast}>Join Now</Button>
+          <Button color="primary" size="md" className="shadow-lg mt-6 w-0 self-center text-xl px-14 my-auto" onPress={showEmailModalToast}>Join Now</Button>
         </NavbarItem>
       </NavbarContent>
 
@@ -82,14 +82,14 @@ export const Navbar = () => {
                 href={item.href}
                 className={clsx(
                   "text-xl",
-                  usePathname() === item.href ? "text-blue-500 font-medium" : ""
+                  usePathname() === item.href ? "text-primary font-medium" : ""
                 )}
               >
                 {item.label}
               </Link>
             </NavbarItem>
           ))}
-          <Button color="primary" size="lg" className="bg-linear-to-tr from-pink-500 to-yellow-500 text-white shadow-lg mt-6 w-0 self-center text-2xl px-[4rem]" onPress={showEmailModalToast}>Join Now</Button>
+          <Button color="primary" size="lg" className="shadow-lg mt-6 w-0 self-center text-2xl px-[4rem]" onPress={showEmailModalToast}>Join Now</Button>
         </div>
       </NavbarMenu>
     </HeroUINavbar>
