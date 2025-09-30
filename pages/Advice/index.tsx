@@ -19,7 +19,7 @@ export default function Advice() {
         <Card className="self-center mb-6 p-[10px]">
           <CardHeader className="text-6xl font-bold justify-center">Advice</CardHeader>
         </Card>
-        <div className="flex sm:flex-row flex-col justify-around gap-6">
+        <div className="flex md:flex-row flex-col justify-around gap-6">
           <Image
             isZoomed
             src={
@@ -30,15 +30,15 @@ export default function Advice() {
             alt="Background image"
             classNames={{
               img: "w-full",
-              wrapper: "sm:w-[40%] w-full",
+              wrapper: "md:w-[40%] w-full",
             }}
           />
-          <div className="grow hidden sm:block max-w-[20%]"></div>
+          <div className="grow hidden md:block max-w-[20%]"></div>
           <Card>
             <CardHeader className="text-2xl font-bold justify-center">Personal Gear List</CardHeader>
             <CardBody>
               <ul className="pl-6 list-disc">
-                <li>Backpack (40-60 liter size) for multi-day hiking</li>
+                <li>Backpack (40-60 liter size) for multi-day tramping</li>
                 <li>Wet or plastic pack liner</li>
                 <li>Sleeping bag (3-4 season)</li>
                 <li>First aid kit including blister treatment materials</li>
@@ -59,7 +59,7 @@ export default function Advice() {
             </CardBody>
           </Card>
         </div>
-        <div className="flex sm:flex-row-reverse flex-col justify-around gap-6 items-center">
+        <div className="flex md:flex-row-reverse flex-col justify-around gap-6 items-center">
           <Image
             isZoomed
             src={
@@ -70,10 +70,10 @@ export default function Advice() {
             alt="Background image"
             classNames={{
               img: "w-full",
-              wrapper: "sm:w-[40%] w-full",
+              wrapper: "md:w-[40%] w-full",
             }}
           />
-          <div className="grow shrink hidden sm:block max-w-[20%]"></div>
+          <div className="grow shrink hidden md:block max-w-[20%]"></div>
           <Card className="h-full">
             <CardHeader className="text-2xl font-bold justify-center">Cooking and food equipment</CardHeader>
             <CardBody className="flex  justify-center">
@@ -87,7 +87,7 @@ export default function Advice() {
             </CardBody>
           </Card>
         </div>
-        <div className="flex sm:flex-row flex-col justify-around gap-6 items-center">
+        <div className="flex md:flex-row flex-col justify-around gap-6 items-center">
           <Image
             isZoomed
             src={
@@ -98,19 +98,19 @@ export default function Advice() {
             alt="Background image"
             classNames={{
               img: "w-full",
-              wrapper: "sm:w-[40%] w-full",
+              wrapper: "md:w-[40%] w-full",
             }}
           />
-          <div className="grow shrink hidden sm:block max-w-[20%]"></div>
+          <div className="grow shrink hidden md:block max-w-[20%]"></div>
           <Card className="h-full">
-            <CardHeader className="text-2xl font-bold justify-center">Miscellaneous Advice</CardHeader>
+            <CardHeader className="text-2xl font-bold justify-center">Useful Tips</CardHeader>
             <CardBody className="flex  justify-center">
               <ul className="pl-6 list-disc">
                 <li>Always check the weather forecast before heading out on a tramp.</li>
                 <li>Inform someone about your itinerary and expected return time.</li>
                 <li>Carry a fully charged mobile phone and a portable power bank.</li>
                 <li>Bring a spare set of clothes, including a waterproof jacket and pants.</li>
-                <li>Wear sturdy hiking boots with good grip and ankle support.</li>
+                <li>Wear sturdy tramping boots with good grip and ankle support.</li>
                 <li>Bring a first aid kit and know how to use the items in it.</li>
                 <li>Stay on marked trails and avoid taking shortcuts through private land.</li>
                 <li>Bring a water filter or water treatment tablets to ensure safe drinking water.</li>
@@ -120,7 +120,7 @@ export default function Advice() {
             </CardBody>
           </Card>
         </div>
-        <div className="flex sm:flex-row-reverse flex-col justify-around gap-6 items-center">
+        <div className="flex md:flex-row-reverse flex-col justify-around gap-6 items-center">
           <Image
             isZoomed
             src={
@@ -131,25 +131,25 @@ export default function Advice() {
             alt="Background image"
             classNames={{
               img: "w-full",
-              wrapper: "sm:w-[40%] w-full",
+              wrapper: "md:w-[40%] w-full",
             }}
           />
-          <div className="grow shrink hidden sm:block max-w-[20%]"></div>
+          <div className="grow shrink hidden md:block max-w-[20%]"></div>
           <Card className="h-full">
-            <CardHeader className="text-2xl font-bold justify-center">Miscellaneous Advice Continued</CardHeader>
+            <CardHeader className="text-2xl font-bold justify-center">More Useful Tips</CardHeader>
             <CardBody className="flex justify-center">
               <ul className="pl-6 list-disc">
                 <li>Pack a small repair kit with duct tape, safety pins, and other basic tools.</li>
                 <li>Bring a map and compass, and know how to use them.</li>
                 <li>Stay hydrated by drinking plenty of water throughout your tramp.</li>
-                <li>Bring a small daypack to carry essentials while hiking.</li>
+                <li>Bring a small daypack to carry essentials while tramping.</li>
                 <li>Take regular breaks to rest and avoid fatigue.</li>
                 <li>Be mindful of your surroundings and respect the natural environment.</li>
                 <li>Bring a small notebook and pen to record observations or notes.</li>
                 <li>Bring a camera or phone to capture memories.</li>
                 <li>Be prepared for changing weather conditions and pack accordingly.</li>
                 <li>Bring a small emergency shelter, such as a space blanket, in case of unexpected situations.</li>
-                <li>Always follow the principles of Leave No Trace and minimize your impact on the environment.</li>
+                <li>Always follow the principles of Leave No Trace and minimise your impact on the environment.</li>
               </ul>
             </CardBody>
           </Card>

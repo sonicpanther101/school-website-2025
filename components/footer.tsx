@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, Link, Image } from "@heroui/react";
 export const Footer = () => {
   return (
     <Card className="flex flex-col sm:flex-row p-[10px] gap-3 flex-none rounded-b-none">
-      <Card className="flex-2">
+      <Card className="flex-2 bg-background">
         <CardBody className="flex flex-col gap-3">
           <div className="flex flex-col sm:flex-row gap-3">
             <Image
@@ -64,21 +64,16 @@ export const Footer = () => {
           </div>
         </CardBody>
       </Card>
-      <Card className="sm:flex-1 flex-0.85">
-        <CardHeader>About</CardHeader>
-        <CardBody className="flex gap-3 flex-col">
-          <Link href="/#about" underline="active">
+      <Card className="sm:flex-1 flex-0.85 bg-background">
+        <CardBody className="flex gap-3 flex-col ml-4">
+          <Link href="https://school-website-2025.vercel.app/#about" underline="active">
             About
           </Link>
-          <Link href="/#FAQ" underline="active">
+          <Link href="https://school-website-2025.vercel.app/#FAQ" underline="active">
             FAQ
           </Link>
-        </CardBody>
-      </Card>
-      <Card className="sm:flex-1 flex-0.75">
-        <CardHeader>Legal</CardHeader>
-        <CardBody>
-          <Link href="/#privacy" underline="active">
+          <p className="mt-3 sm:mt-9">Legal</p>
+          <Link href="https://school-website-2025.vercel.app/#privacy" underline="active">
             Privacy
           </Link>
         </CardBody>

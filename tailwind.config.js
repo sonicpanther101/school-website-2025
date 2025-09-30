@@ -3,6 +3,12 @@ import { flavors, flavorEntries } from "@catppuccin/palette";
 
 const { latte, mocha } = flavors;
 
+// const getScheme(flavor) {
+//   return {
+    
+//   }
+// }
+
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
@@ -28,7 +34,7 @@ const config = {
           background: latte.colors.base.hex, // Base
           foreground: latte.colors.text.hex, // Text
           primary: {
-            DEFAULT: latte.colors.blue.hex, // Blue
+            DEFAULT: latte.colors.green.hex, // Blue
             // foreground: latte.colors.text.hex, // 
           },
           secondary: {
@@ -53,7 +59,7 @@ const config = {
           background: mocha.colors.base.hex, // Base
           foreground: mocha.colors.text.hex, // Text
           primary: {
-            DEFAULT: mocha.colors.blue.hex, // Blue
+            DEFAULT: mocha.colors.green.hex, // Blue
             // foreground: mocha.colors.text.hex, // 
           },
           secondary: {

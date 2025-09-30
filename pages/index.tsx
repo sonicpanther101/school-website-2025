@@ -1,6 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
-import { Card, CardHeader, CardBody, CardFooter, Button, HeroUIProvider, Image } from "@heroui/react";
+import { Card, CardHeader, CardBody, CardFooter, Button, HeroUIProvider, Image, Link } from "@heroui/react";
 import { ToastProvider } from "@heroui/toast";
 
 import { useState } from "react";
@@ -54,8 +54,8 @@ const trampsFooters = [
 export default function IndexPage() {
 
   const [emblaRef] = useEmblaCarousel({
-    loop: true, duration: 50
-  }, [Autoplay({ delay: 3000 })])
+    loop: true, duration: 30
+  }, [Autoplay({ delay: 4000 })])
 
   const imageURLs = [
     "1920-grovetown-vineyard-in-new-zealand.jpg",
@@ -98,13 +98,13 @@ export default function IndexPage() {
           <CardHeader className="text-2xl font-bold">About</CardHeader>
           <CardBody>
             This website serves as a platform for a tramping club, providing
-            members with a space to find and organize local group tramps, share
+            members with a space to find and organise local group tramps, share
             track information, and connect with the tramping community. Designed
-            specifically for outdoor enthusiasts, hikers, and nature lovers, the
+            specifically for outdoor enthusiasts, trampers, and nature lovers, the
             website offers a user-friendly interface to facilitate easy
             communication and collaboration among members. It allows users to
             search for upcoming tramps, view detailed track information, and
-            join or create groups for specific hiking interests. The website
+            join or create groups for specific tramping interests. The website
             also includes features such as event calendars, forums for
             discussions, and a member directory to foster a sense of community
             among tramping enthusiasts.
@@ -117,7 +117,7 @@ export default function IndexPage() {
           </Card>
         </div>
 
-        <TextEmblaCarousel imageUrls={trampsImageURLs} imageAlts={trampsImageAlts} folders={trampsFolders} names={trampsNames} descriptions={trampsDescriptions} footers={trampsFooters} delay={5000} options={{ loop: true, align: "start", duration: 25 }} arrows />
+        <TextEmblaCarousel imageUrls={trampsImageURLs} imageAlts={trampsImageAlts} folders={trampsFolders} names={trampsNames} descriptions={trampsDescriptions} footers={trampsFooters} delay={10000} options={{ loop: true, align: "start", duration: 25 }} arrows />
 
         <Card className="mx-6 sm:mx-10 mt-7 sm:mt-5 md:mt-[-5vh]" id="FAQ">
           <CardHeader className="text-2xl font-bold">FAQ</CardHeader>
@@ -125,29 +125,45 @@ export default function IndexPage() {
             <b>Q:</b> What is the purpose of the website?
             <br />
             <b>A:</b> The purpose of the website is to provide a platform for
-            members to find and organize local group tramps, share track
+            members to find and organise local group tramps, share track
             information, and connect with the tramping community.
             <br />
             <br />
             <b>Q:</b> How can I join?
             <br />
-            <b>A:</b> You can join the club by registering an email to our
+            <b>A:</b> You can <Link
+                  onPress={showEmailModalToast}
+                  
+                  underline="active"
+                >
+                  join
+                </Link> the club by registering an email to our
             mailing list.
             <br />
             <br />
             <b>Q:</b> How can I contact the website owner?
             <br />
             <b>A:</b> You can contact the website owner by email at{" "}
-            <a href="mailto:admin@marlboroughtramps.co.nz">
-              admin@marlboroughtramps.co.nz
-            </a>
+            <Link
+                  href="mailto:admin@marlboroughtramps.co.nz"
+                  isExternal
+                  showAnchorIcon
+                  underline="active"
+                >
+                  admin@marlboroughtramps.co.nz
+                </Link>
             .
             <br />
             <br />
             <b>Q:</b> Can I use the website to promote my group tramp?
             <br />
             <b>A:</b> Yes, you can use the website to promote your group tramp
-            by posting it on our website under the {'"'}Community{'"'} section.
+            by posting it on our website under the <Link
+                  href="/Community"
+                  underline="active"
+                >
+                  Community
+                </Link> section.
           </CardBody>
         </Card>
 
@@ -172,14 +188,14 @@ export default function IndexPage() {
               <li>Pack a small repair kit with duct tape, safety pins, and other basic tools.</li>
               <li>Bring a map and compass, and know how to use them.</li>
               <li>Stay hydrated by drinking plenty of water throughout your tramp.</li>
-              <li>Bring a small daypack to carry essentials while hiking.</li>
+              <li>Bring a small daypack to carry essentials while tramping.</li>
               <li>Take regular breaks to rest and avoid fatigue.</li>
               <li>Be mindful of your surroundings and respect the natural environment.</li>
               <li>Bring a small notebook and pen to record observations or notes.</li>
               <li>Bring a camera or phone to capture memories.</li>
               <li>Be prepared for changing weather conditions and pack accordingly.</li>
               <li>Bring a small emergency shelter, such as a space blanket, in case of unexpected situations.</li>
-              <li>Always follow the principles of Leave No Trace and minimize your impact on the environment.</li>
+              <li>Always follow the principles of Leave No Trace and minimise your impact on the environment.</li>
             </ul>
           </CardBody>
           <CardFooter className="flex justify-center">
@@ -216,7 +232,7 @@ export default function IndexPage() {
             <br />
             <p>
               <b>Information Security:</b> We implement reasonable security
-              measures to protect your information from unauthorized access,
+              measures to protect your information from unauthorised access,
               disclosure, or alteration.
             </p>
           </CardBody>

@@ -106,7 +106,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       </div>
 
       {/* Card under carousel */}
-      <Card className="w-[95%] rounded-2xl m-[2.5%] mt-[-110%] sm:mt-[-30%] shadow-2xl p-sm mb-12">
+      <Card className="w-[95%] rounded-2xl m-[2.5%] mt-[-110%] sm:mt-[-90%] md:mt-[-60%] lg:mt-[-30%] shadow-2xl p-sm mb-12">
         <div className="flex-1 basis-[60%]">
           <CardHeader>
             <h2 className="m-lg my-sm font-bold text-xl">Description</h2>
@@ -174,7 +174,7 @@ const TextEmblaCarousel: React.FC<TrampsPropType> = (props) => {
                       {names[index]}
                     </h1>
                   </CardHeader>
-                  <CardBody className="min-h-[20vh]">
+                  <CardBody>
                     {descriptions[index].split("\\n").map((line, lineIndex) => (
                       <p key={lineIndex}>{line}</p>
                     ))}

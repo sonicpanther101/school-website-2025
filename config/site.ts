@@ -22,6 +22,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/sonicpanther101/school-website",
+    github: "https://github.com/sonicpanther101/school-website-2025",
   },
 };
