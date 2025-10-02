@@ -10,46 +10,8 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { showEmailModalToast } from "@/components/toaster";
 
-import { TextEmblaCarousel } from "@/components/carousel";
-
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from 'embla-carousel-react';
-
-const trampsImageURLs = [
-  "nydia-bay-hero.jpg",
-  "EOSL8486-1121-2.jpg",
-  "wairau-lagoon-2-1200.jpg",
-]
-
-const trampsImageAlts = [
-  "nydia bay hero image",
-  "looking up the hill",
-  "wairau lagoon",
-]
-
-const trampsNames = [
-  "Nydia Bay",
-  "Quail",
-  "Wairau Lagoon"
-]
-
-const trampsDescriptions = [
-  "The 27 km Nydia Track offers walkers and cyclists great views and varied track conditions. Plan on an overnight stop at Nydia Bay where you can explore the history and coastline. The songs of bellbirds and tuī and the sudden “swooshswoosh” of a flying pigeon (kererū) will be heard in the dense, mature forests\\nThis track crosses the Kaiuma and Nydia Saddles and follows the sheltered shoreline of historic Nydia Bay.",
-  "Discover this 8.5-km loop trail near Blenheim, Marlborough. Generally considered a moderately challenging route, it takes an average of 2 h 43 min to complete\\nForest Park Drive Entrance\\nThe Forest Park Drive car park provides a central point to access the park. It is possible to take the track east to Redwood Street, or follow Quail Stream south.",
-  "Features: From Blenheim town centre this walk is 7km. This is one of a few places along the eastern coast of the South Island where it is possible to enjoy the richness and unique beauty of a large estuary. Many species of birds nest here and a bird book and binoculars are useful additional equipment to take! At the lagoons' main channel the rusting hulk of the Waverley sits in the mud."
-]
-
-const trampsFolders = [
-  "Nydia",
-  "Quail",
-  "Lagoon"
-]
-
-const trampsFooters = [
-  "Image Source (Creative Commons): Department of Conservation",
-  "Image Source (Creative Commons): EOSL8486-1121-2 by Ricky Wilson",
-  "Image Source (Creative Commons): Wairau Lagoons by Ricky Wilson"
-]
 
 export default function IndexPage() {
 
@@ -82,7 +44,7 @@ export default function IndexPage() {
           <Card className="p-[10px] rounded-3xl">
             <CardHeader><h1 className="text-5xl md:text-7xl font-black text-center select-none">Marlborough Tramps</h1></CardHeader>
             <CardBody><h2 className="mt-4 text-lg md:text-2xl text-center select-none">Join the club and discover your local tramps.</h2></CardBody>
-            <CardFooter className="flex justify-center"><Button color="primary" size="lg" className="shadow-lg text-2xl" onPress={showEmailModalToast}>Join Now</Button></CardFooter>
+            <CardFooter className="flex justify-center"><Button color="primary" size="lg" className="shadow-lg text-2xl text-background" onPress={showEmailModalToast}>Join Now</Button></CardFooter>
           </Card>
         </div>
 
@@ -125,7 +87,6 @@ export default function IndexPage() {
             <br />
             <b>A:</b> You can <Link
                   onPress={showEmailModalToast}
-                  
                   underline="active"
                 >
                   join
@@ -191,7 +152,7 @@ export default function IndexPage() {
             </ul>
           </CardBody>
           <CardFooter className="flex justify-center">
-            <Button color="primary" size="lg" className="text-xl" onPress={() => window.location.href = "/Advice"}>Learn More</Button>
+            <Button color="primary" size="lg" className="text-xl text-background" onPress={() => window.location.href = "/Advice"}>Learn More</Button>
           </CardFooter>
         </Card>
 

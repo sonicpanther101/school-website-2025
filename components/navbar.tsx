@@ -61,7 +61,7 @@ export const Navbar = () => {
             <GithubIcon className="text-default-500" />
           </HeroLink>
           <ThemeSwitch />
-          <Button color="primary" size="md" className="shadow-lg mt-6 w-0 self-center text-xl px-14 my-auto" onPress={showEmailModalToast}>Join Now</Button>
+          <Button color="primary" size="md" className="shadow-lg mt-6 w-0 self-center text-xl px-14 my-auto text-background" onPress={showEmailModalToast}>Join Now</Button>
         </NavbarItem>
       </NavbarContent>
 
@@ -89,7 +89,7 @@ export const Navbar = () => {
               </Link>
             </NavbarItem>
           ))}
-          <Button color="primary" size="lg" className="shadow-lg mt-6 w-0 self-center text-2xl px-[4rem]" onPress={showEmailModalToast}>Join Now</Button>
+          <Button color="primary" size="lg" className="shadow-lg mt-6 w-0 self-center text-2xl px-[4rem] text-background" onPress={showEmailModalToast}>Join Now</Button>
         </div>
       </NavbarMenu>
     </HeroUINavbar>

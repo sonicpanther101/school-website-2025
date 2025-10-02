@@ -28,7 +28,7 @@ export function showEmailModalToast() {
     endContent: (
       <div className="flex flex-col gap-6">
         <Input type="email" placeholder="you@example.com" fullWidth onChange={(e) => emailValue = e.target.value} />
-        <Button className="underline-offset-2 text-2xl" size="lg" color="primary"
+        <Button className="underline-offset-2 text-2xl text-background" size="lg" color="primary"
           onPress={() => {
             console.log("Email submitted:", emailValue);
             toastShown = false; // allow another toast if needed

@@ -35,11 +35,11 @@ const config = {
           foreground: latte.colors.text.hex, // Text
           primary: {
             DEFAULT: latte.colors.green.hex, // Blue
-            // foreground: latte.colors.text.hex, // 
+            foreground: latte.colors.base.hex, // 
           },
           secondary: {
-            DEFAULT: latte.colors.red.hex,// Red or could use Mauve/Pink
-            // foreground: latte.colors.text.hex,// 
+            DEFAULT: latte.colors.blue.hex,// Red or could use Mauve/Pink
+            foreground: latte.colors.base.hex,// 
           },
           divider: latte.colors.overlay0.hex,// Overlay 0 / subtle border
           overlay: latte.colors.overlay1.hex,// Overlay 1
