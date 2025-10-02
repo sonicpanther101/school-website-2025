@@ -167,7 +167,7 @@ const TextEmblaCarousel: React.FC<TrampsPropType> = (props) => {
                 className="w-full h-[80vh] object-cover sm:rounded-2xl m-[1rem] shadow-2xl"
               />
               {/* Card under each image */}
-              <Card className="w-[95%] rounded-2xl m-[2.5%] mt-[-10%] sm:mt-[-5%] shadow-2xl p-sm mb-12">
+              <Card className="w-[70%] sm:w-[95%] rounded-2xl m-[2.5%] mt-[-10%] sm:mt-[-5%] shadow-2xl p-sm mb-12">
                 <div className="flex-1 basis-[60%]">
                   <CardHeader>
                     <h1 className="text-3xl sm:text-5xl text-center select-none mt-xl">

@@ -71,7 +71,7 @@ export default function IndexPage() {
   const SLIDES = Array.from(Array(8).keys());
 
   return (
-    <div className="relative flex flex-col h-screen">
+    <div className="relative flex flex-col h-screen w-full overflow-x-hidden">
       <SpeedInsights />
       <Analytics />
       <Head />
@@ -110,14 +110,6 @@ export default function IndexPage() {
             among tramping enthusiasts.
           </CardBody>
         </Card>
-
-        <div className="flex flex-col mb-12 mt-12">
-          <Card className="self-center p-[10px]">
-            <CardHeader className="text-6xl font-bold justify-center">Tramps</CardHeader>
-          </Card>
-        </div>
-
-        <TextEmblaCarousel imageUrls={trampsImageURLs} imageAlts={trampsImageAlts} folders={trampsFolders} names={trampsNames} descriptions={trampsDescriptions} footers={trampsFooters} delay={10000} options={{ loop: true, align: "start", duration: 25 }} arrows />
 
         <Card className="mx-6 sm:mx-10 mt-7 sm:mt-5 md:mt-[-5vh]" id="FAQ">
           <CardHeader className="text-2xl font-bold">FAQ</CardHeader>

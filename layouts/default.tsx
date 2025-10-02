@@ -10,8 +10,10 @@ import { Footer } from "@/components/footer";
 
 export default function DefaultLayout({
   children,
+  margin = 0,
 }: {
   children: React.ReactNode;
+  margin?: number;
 }) {
   return (
     <div className="relative flex flex-col h-screen">
@@ -19,7 +21,7 @@ export default function DefaultLayout({
       <Analytics />
       <Head />
       <Navbar />
-      <main className="container mx-auto mb-16 px-6 flex-grow pt-16"><HeroUIProvider>
+      <main className={margin === 0 ? "container flex-grow mx-auto mb-16 px-6 pt-16" : "pt-16"}><HeroUIProvider>
         <ToastProvider placement={"bottom-center"} />
         {" "}
         {children}
