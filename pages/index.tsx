@@ -94,7 +94,7 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <Card className="m-6" id="about">
+        <Card className="mx-6 sm:mx-10 my-6" id="about">
           <CardHeader className="text-2xl font-bold">About</CardHeader>
           <CardBody>
             This website serves as a platform for a tramping club, providing
@@ -111,7 +111,7 @@ export default function IndexPage() {
           </CardBody>
         </Card>
 
-        <Card className="mx-6 sm:mx-10 mt-7 sm:mt-5 md:mt-[-5vh]" id="FAQ">
+        <Card className="mx-6 sm:mx-10" id="FAQ">
           <CardHeader className="text-2xl font-bold">FAQ</CardHeader>
           <CardBody className="inline">
             <b>Q:</b> What is the purpose of the website?
