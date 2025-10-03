@@ -36,6 +36,8 @@ palette - [catppuccin](https://www.npmjs.com/package/@catppuccin/palette)
 
 styling - [tailwind](https://tailwindcss.com/docs/)
 
+Some screenshots include the nextjs logo due to them being taken in dev mode, sometimes with some errors, these errors will be fixed in the final version.
+
 ## 1. Purpose of the Outcome:
 
 The purpose of this project is to create a website for a tramping club that allows members to find and organize local group tramps, share track information, and engage with the tramping community. The website should be easy to use, visually appealing, and functional across multiple devices.
@@ -662,11 +664,11 @@ FAQ section:
 
 #### [Ensure all interactive elements work as intended.](#Functionality)
 
-#### Check for accessibility issues, such as missing alt text or insufficient contrast.
+#### [Check for accessibility issues, such as missing alt text or insufficient contrast.](#accessibility-testing)
 
-#### Use tools like the W3C Validator to validate HTML and CSS. Correct any errors.
+#### [Use tools like the W3C Validator to validate HTML and CSS. Correct any errors.](#validate-html-and-css-code)
 
-#### Conduct usability testing with the stakeholder and actual users, gathering feedback to improve the site’s functionality and user experience.
+#### [Conduct usability testing with the stakeholder and actual users, gathering feedback to improve the site’s functionality and user experience.](#use-feedback-from-usability-tests-to-iteratively-enhance-the-website)
 
 ## Merit Level:
 
@@ -674,11 +676,118 @@ FAQ section:
 
 #### Use feedback from usability tests to iteratively enhance the website.
 
+Evidence of refinement:
+
+- Multiple carousel implementations (EmblaCarousel vs TextEmblaCarousel)
+- Responsive adjustments at multiple breakpoints, because my sister said the site looked bad on her iPad, a screen ratio I wasn't taking into account.
+- Card layouts optimized for different screen sizes
+- Modal positioning adjusted (mb-[20vh] for visibility)
+- Image overflow handling (overflow-hidden), because my dad said there was some image overflow when viewing the website on his phone
+- Different timing on all carousels, because my mum said the images were charging too quickly
+
+TextEmblaCarousel (Card moves with the image) vs EmblaCarousel (Card stays still):
+
+![embla vs text](image-53.png)
+
+Before and after adjustments of spacing:
+
+![bad vs good spacing](image-54.png)
+
 #### Experiment with different design elements (e.g., colour schemes, typography) to find the most effective combinations.
+
+
+
+old vs new colour scheme:
+
+![changing colour scheme](image-55.png)
 
 #### Incorporate Google Fonts for better typography and use normalize.css for consistent styling across browsers.
 
+##### Google Fonts Implementation
+
+While not explicitly shown in code, the theme uses:
+
+- CSS custom properties: `var(--font-sans)`, `var(--font-mono)` which refer to Google Fonts, just in a simpler way
+- Configured in theme extension (tailwind.config.js)
+
+Text Sample:
+
+![text sample](image-56.png)
+
+Font Loading in DevTools:
+
+![dev tools font loading](image-57.png)
+
+##### Normalize.css / CSS Reset
+
+Using HeroUI which includes its own normalization:
+
+- Consistent styling across browsers
+- Base component styles from HeroUI theme
+- Tailwind's [preflight](https://tailwindcss.com/docs/preflight) (built-in normalization)
+
+Homepage on Vivaldi and Firefox:
+
+![firefox vs vivaldi](image-59.png)
+
 #### Apply design techniques like partial transparency, link state styling, and CSS Grid for a polished, professional look.
+
+##### Partial Transparency
+
+Used throughout for sophisticated effects:
+
+- `bg-gray-200/65 dark:bg-gray-900/65` on carousel navigation
+- Semi-transparent navbar while in animation state
+- Semi-transparent modal while in animation state
+- Creates depth and modern aesthetic
+
+Carousel Navigation:
+
+![button](image-58.png)
+
+Semi-transparent Modal:
+
+![modal appearing](image-47.png)
+
+##### Link State Styling
+
+Multiple link states implemented:
+
+- `underline="active"` for links
+- `showAnchorIcon` for external links
+- `isExternal` attribute for proper behavior
+- Active navigation state: `text-primary` when on current page
+- Hover states from HeroUI theme (slightly darkens on hover)
+
+Normal button state:
+
+![normal button](image-19.png)
+
+Hover button state (slightly darker):
+
+![hover button](image-20.png)
+
+Clicked button state (Lighter circle propogates from cursor):
+
+![Clicked button](image-21.png)
+
+##### CSS Grid and Flexbox
+
+Flexible layouts using modern CSS:
+
+- `flex flex-col sm:flex-row` for responsive switching
+- `justify-around`, `justify-center` for alignment
+- `gap-3`, `gap-6 `for spacing
+- `flex-[0_0_100%]` for carousel slides
+- `flex-1`, `flex-2` for proportional sizing
+
+Comparison of mobile and desktop card layout for the advice page:
+
+![Comparison of mobile and desktop card layout advice page](image-17.png)
+
+Examples of flex in DevTools:
+
+![flex in devtools](image-60.png)
 
 ## Excellence Level:
 
