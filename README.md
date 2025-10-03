@@ -695,11 +695,47 @@ Before and after adjustments of spacing:
 
 #### Experiment with different design elements (e.g., colour schemes, typography) to find the most effective combinations.
 
+##### Colour Scheme Evolution
 
+Initial design used a generic color palette with basic blues and grays. After feedback (Sadly not from the stakeholder) and testing:
 
-old vs new colour scheme:
+- Original scheme: Standard blue (#0066cc) ![blue](image-61.png) with neutral grays
+- Final scheme: Catppuccin palette with nature-inspired greens
+  - Primary green aligns with outdoor/nature theme
+  - Improved contrast ratios for accessibility
+  - Cohesive light and dark mode variants
+  - Warmer, more inviting atmosphere for tramping community
+
+The Catppuccin palette was chosen specifically because:
+- The green primary color evokes nature and outdoor activities
+- The palette provides excellent contrast in both light and dark modes
+- Consistent color tokens (base, surface, overlay) create visual harmony
+- Professional appearance while remaining approachable
+
+Old vs new colour scheme:
 
 ![changing colour scheme](image-55.png)
+
+##### Typography Experimentation
+
+Multiple font combinations were tested:
+
+- Initial approach: Generic system fonts with inconsistent sizing
+- Refined approach: Custom font stack with clear hierarchy
+  - Implemented consistent scale: text-xs through text-7xl
+  - Bold weights (font-bold, font-black) for emphasis
+  - Optimized line heights for readability
+  - Sans-serif for clean, modern look suitable for outdoor website
+
+Font size adjustments based on testing:
+
+- Hero text increased from text-4xl to text-7xl on desktop for impact
+- Card titles standardized at text-2xl for consistency
+- Body text set at text-base to text-xl for optimal readability across devices
+
+Subtle differences in font and font styles before and after adjustments:
+
+![before and after](image-62.png)
 
 #### Incorporate Google Fonts for better typography and use normalize.css for consistent styling across browsers.
 
