@@ -1,3 +1,5 @@
+"use client";
+
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { Card, CardHeader, CardBody, CardFooter, Button, HeroUIProvider, Image, Link } from "@heroui/react";
@@ -51,7 +53,11 @@ export default function IndexPage() {
         <div className="w-full h-screen overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {SLIDES.map((index) => (
-              <div className="flex-[0_0_100%] h-screen bg-cover bg-center" style={{ backgroundImage: `url('https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/${imageURLs[index]}')` }}></div>
+              <div 
+                key={imageURLs[index]}
+                className="flex-[0_0_100%] h-screen bg-cover bg-center" 
+                style={{ backgroundImage: `url('https://raw.githubusercontent.com/sonicpanther101/school-website-2025/refs/heads/main/Images/${imageURLs[index]}')` }}
+              ></div>
             ))}
           </div>
         </div>

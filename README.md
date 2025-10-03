@@ -4,28 +4,29 @@
 
 - [x] Pages:
 
-- [x] Home
-- [x] Tramps - stats: difficulty, distance, and key features.
-- [x] Tramping advise - gear
-- [x] Privacy policy
-- [x] Community
-- [x] Navbar
-- [x] Footer
+  - [x] Home
+  - [x] Tramps - stats: difficulty, distance, and key features.
+  - [x] Tramping advise - gear
+  - [x] Privacy policy
+  - [x] Community
+  - [x] Navbar
+  - [x] Footer
 
-- [ ] Responsive pages:
+- [x] Responsive pages:
 
-- [ ] Home
-- [x] Tramps
-- [x] Tramping advise
-- [x] Privacy policy
-- [x] Community
-- [x] Navbar
-- [x] Footer
+  - [x] Home
+  - [x] Tramps
+  - [x] Tramping advise
+  - [x] Privacy policy
+  - [x] Community
+  - [x] Navbar
+  - [x] Footer
 
-- [ ] Features:
-- [x] Form to sign up to group tramps
-- [x] Dark mode
-- [x] Comments [elfsight](https://elfsightcdn.com)
+- [x] Features:
+
+  - [x] Form to sign up to group tramps
+  - [x] Dark mode
+  - [x] Comments [elfsight](https://elfsightcdn.com)
 
 react framework - [NextJS](https://nextjs.org/docs/app/getting-started/installation)
 
@@ -382,6 +383,10 @@ Responsive Testing with chrome dev tools:
 - Color contrast (Catppuccin palette has good contrast)
 - External link icons (showAnchorIcon)
 
+Alt text on images:
+
+![alt text](image-52.png)
+
 ### Apply user experience principles relevant to the purpose of the website. Use these to iteratively improve the quality of the website
 
 #### Accessibility
@@ -393,64 +398,328 @@ Responsive Testing with chrome dev tools:
 - Phone and email links are clickable (tel:, mailto:)
 - Responsive text sizing (text-xl, text-2xl, etc.)
 
+Lighthouse, a web performance tool provided by Google, benchmark results (Performance is only low due to Picton wifi):
+
+![Lighthouse](image-34.png)
+
+Focus and External Link Indicator:
+
+![focus](image-35.png)
+
+#### Target User Focus
+
+Designed for outdoor enthusiasts and trampers:
+
+- Nature-themed imagery throughout
+- Clear hiking information (difficulty, distance, time)
+- Practical advice sections
+- Community features for group organization
+- Mobile-friendly (users access on-the-go)
+- Quick access to "Join Now" from multiple locations
+
+Community comments page:
+
+![community page](image-36.png)
+
+Track information:
+
+![Track information for Nydia Track](image-2.png)
+
+Join Button location:
+
+![Mobile nav menu](image-6.png)
+
+#### Consistency
+
+Consistent design elements throughout:
+
+- Card-based layout system
+- Uniform button styling (primary color, consistent sizing)
+- Repeated carousel pattern for image galleries
+- Consistent footer across all pages
+- Same navigation on every page
+- Catppuccin color scheme throughout
+
+Consistent Design Elements:
+
+![comparing two pages design](image-37.png)
+
+Footer on different pages:
+
+![footer on different pages](image-38.png)
+
+#### Simplicity
+
+Clean, uncluttered design:
+
+- Clear navigation with 4 main items
+- Simple card layouts
+- Minimal text with clear sections
+- White space for breathing room
+- Single primary action (Join Now)
+- FAQ section for common questions
+
+Clean, Uncluttered Design with simple navigation:
+
+![hero](image.png)
+
+Lots of white space for breathing room:
+
+![advice page](image-39.png)
+
+#### Typography
+
+Font system from theme configuration:
+
+- Sans-serif font family (`var(--font-sans)`)
+- Clear font size hierarchy (`text-xs` to `text-7xl`)
+- Bold weights for emphasis (`font-bold`, `font-black`)
+- Line height and spacing optimized
+- Readable on all screen sizes
+
+Font size and weight hierarchy, line height and spacing optimized:
+
+![font hierarchy](image-40.png)
+
+Readable on mobile:
+
+![mobile](image-41.png)
+
+#### Providing Feedback
+
+User feedback mechanisms:
+
+- Toast notifications for modal interactions
+- Hover effects on buttons and links
+- Active states on navigation items (text-primary when on page)
+- Disabled states on carousel buttons (prevBtnDisabled, nextBtnDisabled)
+- Visual feedback on form submission (Form closes if email is valid, error message if not)
+
+Active states on navigation items:
+
+![active states](image-42.png)
+
 ## 4. Addressing Relevant Implications (at least three):
+
 Ensure that the website addresses the relevant implications:
-### Social and Cultural
+
 ### Legal & Intellectual Property
+
+- All images not provided by the stakeholder are attributed with Creative Commons licensing
+- Sources clearly stated in card footers:
+  - "Image Source (Creative Commons): Department of Conservation"
+  - "Image Source (Creative Commons): [Photographer name]"
+- No copyrighted material used without permission
+
+Creative Commons attribution:
+
+![creative commons credits](image-43.png)
+
 ### Privacy/Confidentiality
-### Accessibility & Usability & Aesthetics
-### Functionality - works
-### Sustainability and Future-Proofing - using easy framework
+
+Dedicated Privacy Policy section on homepage:
+
+- Clear statement: "We value your privacy"
+- Information Collection explained
+- Information Use outlined
+- Information Sharing policy (no third-party sales)
+- Information Security measures described
+- Accessible via footer link
+- Modal only collects email (minimal data)
+
+Privacy Policy:
+
+![privacy policy](image-45.png)
+
+Footer with link to privacy policy:
+
+![Footer with link to privacy policy](image-44.png)
+
+### Accessibility & Usability
+
+- Semantic HTML structure throughout
+- Alt text on all images
+- Keyboard navigation support
+- Focus states visible
+- Color contrast meets standards (Catppuccin palette)
+- Mobile-responsive design
+- Touch targets appropriately sized (buttons size="lg")
+- Clear visual hierarchy
+- External links clearly marked
+
+Lighthouse accessibility benchmark results:
+
+![Lighthouse](image-34.png)
+
+Appropriatly sized mobile buttons:
+
+![Mobile Join Now button](image-5.png)
+
+### Aesthetics
+
+- Modern, clean design using Catppuccin theme
+- Consistent color scheme (light and dark modes)
+- Professional card-based layout
+- High-quality nature photography
+- Rounded corners and shadows for depth
+- Proper spacing and white space
+- Typography hierarchy
+- Smooth transitions and animations
+
+Consistent color scheme:
+
+![Wairou Lagoons, demonstrating consistent color scheme](image-3.png)
+
+Bottom edge of a card, with rounded corners, shadow, and white space:
+
+![bottom edge of a card](image-46.png)
+
+### Functionality
+
+All core features working:
+
+- [x] Navigation between pages
+- [x] Email signup modal
+- [x] Image carousels with autoplay
+- [x] Responsive layouts
+- [x] Theme switching (light/dark)
+- [x] External links functioning
+- [x] Community comments widget
+- [x] Contact links (tel:, mailto:)
+
+Modal appearing:
+
+![modal appearing](image-47.png)
+
+Carousel with autoplay:
+
+![carousel changing](image-48.png)
+
+### Sustainability and Future-Proofing
+
+Using modern, maintainable frameworks:
+
+- [Next.js](https://nextjs.org) - Industry-standard React framework
+- [React](https://react.dev) - Component-based, reusable code
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first, maintainable styling
+- [HeroUI](https://www.heroui.com) - Professional component library
+- [TypeScript](https://www.typescriptlang.org) - Type safety (implied from .tsx extensions)
+- [Embla Carousel](https://www.embla-carousel.com) - well-maintained library
+- [GitHub](https://github.com) for version control and hosting
+- Clear component structure in `/components` folder
+- Separation of concerns (layouts, pages, components)
+
+Project File Structure:
+
+![file structure](image-49.png)
+
+Dependencies in `package.json`:
+
+![dependencies](image-50.png)
+
 ### End-User Considerations
 
+Features prioritizing end-users:
+
+- Mobile-first design (users access on-the-go)
+- Quick "Join Now" access from multiple locations
+- Clear, concise track information
+- Practical tramping advice readily available
+- Community features for member engagement
+- FAQ section for common questions
+- Multiple contact methods (email, phone)
+- Fast loading with optimized images and lazy loading
+
+Mobile Experience:
+
+![Mobile homepage](image-7.png)
+
+FAQ section:
+
+![FAQ](image-51.png)
+
 ## 5. Applying User Experience (UX) Principles (at least two):
-##t# Accessibility
-### Focus on the Target User: 
-### Consistency
-### Simpliciy
-### Font Styling (Typography)
-### Usability Testing
-### Providing Feedback
+
+### [Accessibility](#accessibility)
+
+### [Focus on the Target User](#target-user-focus)
+
+### [Consistency](#consistency)
+
+### [Simplicity](#simplicity)
+
+### [Font Styling (Typography)](#typography)
+
+### [Providing Feedback](#providing-feedback)
 
 ## 6. Applying Data Integrity and Testing Procedures (at least three):
-### Data Integrity: Validate form inputs (e.g., user sign-ups) to ensure correct and reliable data.
+
+### [Data Integrity: Validate form inputs (e.g., user sign-ups) to ensure correct and reliable data.](#form-validation)
+
 ### Testing:
-#### Test the website’s responsiveness on different devices and screen sizes.
-#### Ensure all interactive elements work as intended.
+
+#### [Test the website’s responsiveness on different devices and screen sizes.](#responsive-testing)
+
+#### [Ensure all interactive elements work as intended.](#Functionality)
+
 #### Check for accessibility issues, such as missing alt text or insufficient contrast.
+
 #### Use tools like the W3C Validator to validate HTML and CSS. Correct any errors.
+
 #### Conduct usability testing with the stakeholder and actual users, gathering feedback to improve the site’s functionality and user experience.
 
-
 ## Merit Level:
+
 ### Apply UX Principles for Quality Improvement:
+
 #### Use feedback from usability tests to iteratively enhance the website.
+
 #### Experiment with different design elements (e.g., colour schemes, typography) to find the most effective combinations.
+
 #### Incorporate Google Fonts for better typography and use normalize.css for consistent styling across browsers.
+
 #### Apply design techniques like partial transparency, link state styling, and CSS Grid for a polished, professional look.
 
 ## Excellence Level:
+
 ### Continual Improvement:
+
 #### Begin by designing the homepage and seek feedback from end-users on both its appearance and functionality.
+
 #### Implement suggested changes, then expand the website by adding more pages and features.
+
 #### Regularly test and refine the website throughout the development process, keeping detailed records of all improvements made based on testing results.
 
 ### Efficient Tools and Techniques:
+
 #### Use wireframes and concept sketches to plan the website’s design.
+
 #### Take advantage of shortcuts and tools like Visual Studio Code and Google Chrome DevTools for efficient coding and debugging.
+
 #### Optimize images using tools like https://tinypng.com/ to ensure fast loading times.
+
 #### Apply mobile-first design principles, ensuring the website is fully functional on mobile devices before scaling up to larger screens.
+
 #### Comment your code clearly to make it easier to understand and maintain.
+
 #### Use descriptive class and ID names
+
 #### Validate HTML and CSS code
 
-
 ## Evidence to be submitted:
+
 ### 1. Submit the completed website in zip format, containing HTML, CSS and media files
+
 ### 2. A written description of how you addressed the relevant implications
+
 ### 3. Records of how you completed data integrity and testing procedures when developing the website. This could include:
+
 #### a testing table
+
 #### annotated screenshots (eg showing the version of a webpage you tested and the changes made as a consequence of testing)
+
 #### a video of no more than 3 minutes showing how you conducted the testing
+
 #### stakeholder feedback records
+
 #### screenshots of completed validation procedures etc
