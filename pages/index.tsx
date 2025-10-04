@@ -48,7 +48,7 @@ export default function IndexPage() {
   const SLIDES = Array.from(Array(8).keys());
 
   return (
-    <div className={`${roboto.variable} ${robotoMono.variable}relative flex flex-col h-screen w-full overflow-x-hidden`}>
+    <div className={`${roboto.variable} ${robotoMono.variable} relative flex flex-col h-screen w-full overflow-x-hidden`}>
       <SpeedInsights />
       <Analytics />
       <Head />
