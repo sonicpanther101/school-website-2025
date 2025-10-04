@@ -831,27 +831,314 @@ Examples of flex in DevTools:
 
 ### Continual Improvement:
 
+Iteration can be seen in the [commit history](https://github.com/sonicpanther101/school-website-2025/commits/main/) of this project.
+
 #### Begin by designing the homepage and seek feedback from end-users on both its appearance and functionality.
+
+The homepage (`pages/index.tsx`) was clearly developed first:
+
+Ask me about this in class and I can show you all versions of the website through vercel (I need to be logged in to view older versions):
+
+- Contains hero section as primary entry point
+- Includes preview of all major features
+- Links to all other pages
+- About section introduces the site
+- FAQ addresses common questions
+- Tramps preview with TextEmblaCarousel (has since been removed due to a suggestion to simplify the home page by my dad)
+- Advice preview section
+- Privacy policy included
 
 #### Implement suggested changes, then expand the website by adding more pages and features.
 
+Progressive enhancement visible:
+
+- Basic layout with cards
+- Added carousel functionality (Embla), suggested by the stakeholder
+- Created separate tramp pages with detailed info
+- Added advice page with multiple sections
+- Integrated community comments (Elfsight)
+- Added modal for email signups
+- Implemented theme switching, a favorite feature of mine
+
+Commit history showing progress:
+
+![history](image-63.png)
+
+Feature Checklist (also at the top of this README):
+
+![checklist](image-64.png)
+
 #### Regularly test and refine the website throughout the development process, keeping detailed records of all improvements made based on testing results.
+
+##### Using Vercel for Continuous Deployment and Testing
+
+The development process leveraged Vercel as the primary deployment and testing platform, enabling rapid iteration and real-world testing throughout the entire development cycle.
+
+- Automatic Deployments: Every push to the GitHub repository triggered an automatic deployment to Vercel
+- Preview Deployments: Each branch and pull request generated a unique preview URL for testing changes before merging
+- Production URL: https://school-website-2025.vercel.app/ serves as the live production environment
+- Instant Feedback: Changes visible within seconds of pushing code, allowing for rapid testing cycles
+
+Vercel Dashboard:
+
+![vercel](image-65.png)
+
+Successful Deployment used for testing tracks page:
+
+![deployment](image-66.png)
+
+##### Real-World Testing Benefits
+
+Using Vercel for testing provided several advantages over local development:
+
+Actual Performance Metrics:
+
+- Vercel Speed Insights integrated (`import { SpeedInsights } from "@vercel/speed-insights/next"`)
+- Real user performance data collected
+- Core Web Vitals monitoring (LCP, FID, CLS)
+- Identified slow-loading images and optimized them
+
+Speed Insights (Cumulative Layout Shift is only bad because it tracks the movement of elements, and I have a carousel that moves elements around):
+
+![speed insights](image-67.png)
+
+Core Web Vitals, in DevTools:
+
+![core web vitals](image-68.png)
+
+Analytics Integration:
+
+- Vercel Analytics enabled (`import { Analytics } from "@vercel/analytics/next"`)
+- Track actual user behavior and page views
+- Identify most popular pages (Home page had highest traffic, as expected)
+- Monitor user engagement with carousels and modal
+
+Web Analytics:
+
+![analytics](image-69.png)
+
+Mobile Device Testing:
+
+- Accessible from any device via public URL
+- Tested on actual smartphones and tablets, not just browser simulators
+- Friends and family members tested from various devices
+- Discovered carousel swipe sensitivity issues on iOS devices
+- Adjusted Embla carousel configuration based on mobile feedback from both of my parents
+
+Testing on Different Devices:
+
+![devices](image-70.png)
 
 ### Efficient Tools and Techniques:
 
 #### Use wireframes and concept sketches to plan the website’s design.
 
+Microsoft Paint was used to create initial concept sketches and wireframes during the planning phase of the website. 
+This simple, accessible tool allowed for quick visualization of layout ideas without the complexity of specialized design software.
+
+Planning Process:
+
+- Created basic wireframe sketches for homepage layout, showing hero section placement, navigation bar, and card-based content sections
+- Sketched mobile vs desktop layouts to plan responsive breakpoints
+- Drew concept designs for the carousel component showing image placement and navigation arrows
+- Planned card layouts for the Advice page with alternating image and text sections
+- Sketched the tramp pages to plan layout and navigation structure
+
+Benefits of Microsoft Paint for concept sketches:
+
+- Quick and accessible - no learning curve
+- Easy to iterate rapidly on ideas
+- Simple shapes and text sufficient for initial planning
+- Allowed focus on layout structure rather than visual polish
+- Saved sketches as reference throughout development
+
+The wireframes established the foundational structure visible in the final site:
+
+- Consistent layout patterns (cards, carousels)
+- Clear page structure hierarchy
+- Reusable component design
+- Responsive layout considerations
+
+Advice Sketch:
+
+![advice sketch](concept%20sketches/advice.png)
+
+Community Sketch:
+
+![community sketch](concept%20sketches/community.png)
+
+Footer Sketch:
+
+![footer sketch](concept%20sketches/footer.png)
+
+Hero Sketch:
+
+![hero sketch](concept%20sketches/hero%20page.png)
+
+Home Sketch:
+
+![home sketch](concept%20sketches/home%20page.png)
+
+Navigation Sketch:
+
+![navigation sketch](concept%20sketches/navbar.png)
+
+Responsive Template Sketch:
+
+![responsive sketch](concept%20sketches/responsive%20template.png)
+
+Tracks Sketch:
+
+![tracks sketch](concept%20sketches/tracks%20page.png)
+
 #### Take advantage of shortcuts and tools like Visual Studio Code and Google Chrome DevTools for efficient coding and debugging.
+
+##### Visual Studio Codium (a community-driven, freely-licensed binary distribution of Microsoft's editor VS Code)
+
+Modern development environment indicated by:
+
+- TypeScript/JSX (.tsx) files
+- Proper file organization structure
+- Import/export ES6 syntax ([eslint](https://eslint.org/) a code linter which is a tool that analyzes code for potential errors and enforces coding standards. It can be configured to check for syntax errors, best practices, and even enforce specific coding styles. By using a linter, developers can catch mistakes early and ensure code is of high quality.
+- Modern React hooks (useState, useEffect, useCallback)
+
+VSCodium Workspace:
+
+![workspace](image-71.png)
+
+##### Chrome DevTools
+
+Testing and debugging evidence:
+
+- Responsive design testing
+- Console logging for debugging
+- CSS inspection and adjustment
+- Performance monitoring
+
+Chrome DevTools:
+
+![devtools](image-72.png)
 
 #### Optimize images using tools like https://tinypng.com/ to ensure fast loading times.
 
+Images hosted on GitHub with optimization:
+
+- Variety of good compression formats (jpg, webp)
+- Lazy loading with Next.js Image optimization
+- Compressed using [ffmpeg](https://ffmpeg.org) (a complete, cross-platform solution to record, convert and stream audio and video) to reduce file size
+
+Good Compression/File Size:
+
+![image file size](image-73.png)
+
+Image loading times (Grovetown vineyard image takes a long time to load, but it is loaded lazily and is only shown as a later image in the carousel):
+
+![loading times](image-74.png)
+
 #### Apply mobile-first design principles, ensuring the website is fully functional on mobile devices before scaling up to larger screens.
+
+Clear mobile-first approach:
+
+- Base styles for mobile (no prefix)
+- Progressive enhancement with `sm:`, `md:`, `lg:`
+- Navigation adapts (hamburger menu on mobile)
+- Touch-friendly button sizes (`size="lg"`)
+- Carousels work with swipe gestures
+
+Mobile Navigation Menu:
+
+![Mobile nav menu](image-6.png)
+
+Mobile Homepage:
+
+![Mobile homepage](image-7.png)
+
+Comparison between mobile and desktop:
+
+![Mobile vs Desktop](image-16.png)
 
 #### Comment your code clearly to make it easier to understand and maintain.
 
+The codebase demonstrates the thoughtful use of comments, recognizing that modern TypeScript/JSX (TSX) is largely self-documenting through:
+
+- Descriptive component names (EmblaCarousel, TextEmblaCarousel, showEmailModalToast)
+- Clear variable names (imageURLs, imageAlts, prevBtnDisabled)
+- Type definitions that serve as inline documentation (PropType, TrampsPropType)
+- Semantic JSX structure that reads like natural language
+
+Comments are strategically placed only where complexity warrants explanation:
+
+- Complex state management or non-obvious behavior is annotated
+- Simple, self-explanatory code (like button onClick handlers or basic JSX structure) is left uncommented to avoid clutter
+
+This approach follows modern best practices: "Good code is its own best documentation" - comments should explain why something is done, not what is being done (which should be obvious from the code itself).
+
+Example of commented code (though sparse):
+
+![commented code](image-80.png)
+
+Example of self-explanatory code with descriptive component names:
+
+![self-explanatory code](image-81.png)
+
 #### Use descriptive class and ID names
 
+Good code practices:
+
+- Clear component names (EmblaCarousel, TextEmblaCarousel)
+- Descriptive variable names (imageURLs, imageAlts)
+- Separated concerns (components, pages, layouts)
+- Type annotations (React.FC, PropType, TrampsPropType)
+- Organized imports
+
+Clear component structure:
+
+![clear code](image-75.png)
+
+Type declarations:
+
+![declarations](image-76.png)
+
 #### Validate HTML and CSS code
+
+Modern Framework Validation
+
+This website uses Next.js with React and TypeScript, which provides superior validation compared to traditional W3C validators:
+
+TypeScript Compilation:
+
+- Type checking at build time catches errors before deployment
+- PropType definitions ensure correct component usage
+- Interface validation for all data structures
+- IDE integration provides real-time error detection
+
+Next.js Build Process:
+
+- Automated validation during npm run build
+- JSX syntax validation ensures proper HTML structure
+- CSS-in-JS validation through Tailwind
+- Component prop validation via HeroUI
+- Tree-shaking removes unused code automatically
+
+Advantages over W3C Validator:
+
+- W3C validators don't understand JSX/TSX syntax
+- Modern frameworks generate optimized HTML at runtime
+- Component-based architecture ensures consistent markup
+- TypeScript prevents many HTML/CSS errors before they occur
+- Build errors prevent deployment of invalid code
+
+Successful Build with no Errors:
+
+![successful build](image-77.png)
+
+Example of Type Error:
+
+![type error](image-78.png)
+
+Example of Build with Error:
+
+![build with error](image-79.png)
 
 ## Evidence to be submitted:
 
