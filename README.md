@@ -741,10 +741,12 @@ Subtle differences in font and font styles before and after adjustments:
 
 ##### Google Fonts Implementation
 
-While not explicitly shown in code, the theme uses:
+The application uses Google Fonts loaded via Next.js's optimized font system:
 
-- CSS custom properties: `var(--font-sans)`, `var(--font-mono)` which refer to Google Fonts, just in a simpler way
-- Configured in theme extension (tailwind.config.js)
+- Roboto (sans-serif): Loaded with weights 300, 400, 500, and 700 for primary text
+- Roboto Mono (monospace): Loaded with weights 400, 500, and 700 for code and technical content (not used, but there if I need it)
+- Exposed via CSS custom properties: `var(--font-sans)` and `var(--font-mono)`
+- Configured as CSS variables in the root layout and extended in Tailwind configuration for seamless integration
 
 Text Sample:
 

@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { Card, CardHeader, CardBody, CardFooter, Button, HeroUIProvider, Image, Link } from "@heroui/react";
 import { ToastProvider } from "@heroui/toast";
+import { Roboto, Roboto_Mono } from 'next/font/google'
 
 import { useState } from "react";
 
@@ -14,6 +15,18 @@ import { showEmailModalToast } from "@/components/toaster";
 
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from 'embla-carousel-react';
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+const robotoMono = Roboto_Mono({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
 
 export default function IndexPage() {
 
@@ -35,7 +48,7 @@ export default function IndexPage() {
   const SLIDES = Array.from(Array(8).keys());
 
   return (
-    <div className="relative flex flex-col h-screen w-full overflow-x-hidden">
+    <div className={`${roboto.variable} ${robotoMono.variable}relative flex flex-col h-screen w-full overflow-x-hidden`}>
       <SpeedInsights />
       <Analytics />
       <Head />
