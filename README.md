@@ -71,7 +71,7 @@ The Marlborough Tramps website was successfully created using Next.js with React
 
 ![hero](image.png)
 
-![Nydia Track](image-2.png)
+![Nydia Track](public/image-2.png)
 
 ## 2. Requirements of the End Users:
 
@@ -86,11 +86,11 @@ All three tracks (Nydia Bay, Quail Stream Walk, and Wairau Lagoons) are presente
 - Key features including walking time, grade, and terrain details
 - Creative Commons image attribution in footers
 
-![Nydia Track](image-2.png)
+![Nydia Track](public/image-2.png)
 
-![Quail Stream Walk](image-1.png)
+![Quail Stream Walk](public/image-1.png)
 
-![Wairou Lagoons](image-3.png)
+![Wairou Lagoons](public/image-3.png)
 
 ### Offers a pop-up (modal) form to sign up for group tramps.
 
@@ -104,11 +104,11 @@ Implemented in `components/toaster.tsx` using HeroUI's toast system:
 
 Desktop:
 
-![Desktop Join Now](image-4.png)
+![Desktop Join Now](public/image-4.png)
 
 Mobile:
 
-![Mobile Join Now](image-5.png)
+![Mobile Join Now](public/image-5.png)
 
 ### Is accessible and usable on mobile devices, as many users may access the site while on the go.
 
@@ -122,15 +122,15 @@ Responsive design implemented throughout using:
 
 Mobile Navigation Menu:
 
-![Mobile nav menu](image-6.png)
+![Mobile nav menu](public/image-6.png)
 
 Mobile Homepage:
 
-![Mobile homepage](image-7.png)
+![Mobile homepage](public/image-7.png)
 
 Tablet Advise Page:
 
-![Tablet advise](image-8.png)
+![Tablet advise](public/image-8.png)
 
 ### Offers advice on tramping procedures
 
@@ -144,11 +144,11 @@ Dedicated `pages/Advice/index.tsx` page includes:
 
 Advice Page:
 
-![Advice](image-9.png)
+![Advice](public/image-9.png)
 
 Useful Tips:
 
-![useful tips](image-10.png)
+![useful tips](public/image-10.png)
 
 ### Creates three web pages, with combinations of images and text.
 
@@ -161,7 +161,7 @@ Created four pages:
 
 Navbar showing all pages:
 
-![navbar](image-11.png)
+![navbar](public/image-11.png)
 
 ### Adds appropriate headings and subheads
 
@@ -174,7 +174,7 @@ Semantic HTML heading hierarchy used throughout:
 
 Example of heading hierarchy:
 
-![homepage title and subtitle code](image-12.png)
+![homepage title and subtitle code](public/image-12.png)
 
 ### Uses images, logo and provided by the stakeholder (see Tramping images folder)
 
@@ -185,11 +185,11 @@ All images other than walk specific ones provided by the stakeholder:
 
 Footer:
 
-![Footer](image-14.png)
+![Footer](public/image-14.png)
 
 Homepage carousel and navbar logo:
 
-![Homepage and navbar](image-13.png)
+![Homepage and navbar](public/image-13.png)
 
 ### Uses the contact address details:
 
@@ -201,11 +201,11 @@ Contact information displayed in footer component (`components/footer.tsx`):
 
 Footer:
 
-![Footer](image-14.png)
+![Footer](public/image-14.png)
 
 Footer hover:
 
-![Footer hover](image-15.png)
+![Footer hover](public/image-15.png)
 			
 ## 3. Website Creation Using Appropriate Tools, Techniques, and Conventions:
 
@@ -221,15 +221,15 @@ Implemented using Tailwind CSS breakpoints throughout all components:
 
 Comparison between mobile and desktop:
 
-![Mobile vs Desktop](image-16.png)
+![Mobile vs Desktop](public/image-16.png)
 
 Mobile Navigation Menu:
 
-![Mobile nav menu](image-6.png)
+![Mobile nav menu](public/image-6.png)
 
 Responsive Card Layout:
 
-![Comparison of mobile and desktop card layout advice page](image-17.png)
+![Comparison of mobile and desktop card layout advice page](public/image-17.png)
 
 ### Interactivity: Implement interactive features such as:
 
@@ -244,11 +244,11 @@ Implemented in `components/navbar.tsx`:
 
 Closed vs Open Navigation Menu Hamburger on mobile (Interpolates between states):
 
-![closed vs open menu](image-18.png)
+![closed vs open menu](public/image-18.png)
 
 Mobile Navigation Menu:
 
-![Mobile nav menu](image-6.png)
+![Mobile nav menu](public/image-6.png)
 
 #### Buttons that change appearance on hover or click to provide visual feedback.
 
@@ -258,15 +258,15 @@ Multiple interactive button states:
 
 Normal button state:
 
-![normal button](image-19.png)
+![normal button](public/image-19.png)
 
 Hover button state (slightly darker):
 
-![hover button](image-20.png)
+![hover button](public/image-20.png)
 
 Clicked button state (Lighter circle propogates from cursor):
 
-![Clicked button](image-21.png)
+![Clicked button](public/image-21.png)
 
 #### An image slideshow to display photos from past walks.
 
@@ -285,15 +285,15 @@ Features:
 
 Desktop Carousel:
 
-![Desktop carousel for Nydia Track](image-2.png)
+![Desktop carousel for Nydia Track](public/image-2.png)
 
 Mobile Carousel:
 
-![Mobile carousel for Nydia Track](image-22.png)
+![Mobile carousel for Nydia Track](public/image-22.png)
 
 Carousel in action:
 
-![Carousel in action](image-23.png)
+![Carousel in action](public/image-23.png)
 
 ### Industry guidelines (conventions) including semantic HTML: Structure your HTML using semantic elements to improve accessibility, SEO, and maintainability.
 
@@ -308,7 +308,7 @@ All pages use proper semantic structure:
 - Links with proper attributes (isExternal, showAnchorIcon)
 
 Code structure:
-![default layout](image-24.png)
+![default layout](public/image-24.png)
 
 ### Apply relevant website conventions (eg semantic HTML and design principles) and apply these to improve the quality of the website.
 
@@ -328,17 +328,17 @@ Custom theme in `tailwind.config.js`:
 
 Dark Mode:
 
-![dark mode](image-25.png)
+![dark mode](public/image-25.png)
 
 Light Mode:
 
-![light mode](image-26.png)
+![light mode](public/image-26.png)
 
 Light/Dark Mode Toggle:
 
-![dark mode toggle](image-27.png)
+![dark mode toggle](public/image-27.png)
 
-![light mode toggle](image-28.png)
+![light mode toggle](public/image-28.png)
 
 #### Consistent Spacing
 
@@ -349,7 +349,7 @@ Light/Dark Mode Toggle:
 
 Demonstrating Consistent Spacing:
 
-![comparing gaps](image-29.png)
+![comparing gaps](public/image-29.png)
 
 #### Visual Hierarchy
 
@@ -376,15 +376,15 @@ Email input in modal (`components/toaster.tsx`):
 
 Invalid Email:
 
-![invalid email](image-30.png)
+![invalid email](public/image-30.png)
 
 Valid Email:
 
-![valid email](image-31.png)
+![valid email](public/image-31.png)
 
 Terminal output:
 
-![terminal](image-32.png)
+![terminal](public/image-32.png)
 
 #### Responsive Testing
 
@@ -397,7 +397,7 @@ Website tested across multiple devices:
 
 Responsive Testing with chrome dev tools:
 
-![responsive](image-33.png)
+![responsive](public/image-33.png)
 
 #### Accessibility Testing
 
@@ -408,7 +408,7 @@ Responsive Testing with chrome dev tools:
 
 Alt text on images:
 
-![alt text](image-52.png)
+![alt text](public/image-52.png)
 
 ### Apply user experience principles relevant to the purpose of the website. Use these to iteratively improve the quality of the website
 
@@ -423,11 +423,11 @@ Alt text on images:
 
 Lighthouse, a web performance tool provided by Google, benchmark results (Performance is only low due to Picton wifi):
 
-![Lighthouse](image-34.png)
+![Lighthouse](public/image-34.png)
 
 Focus and External Link Indicator:
 
-![focus](image-35.png)
+![focus](public/image-35.png)
 
 #### Target User Focus
 
@@ -442,15 +442,15 @@ Designed for outdoor enthusiasts and trampers:
 
 Community comments page:
 
-![community page](image-36.png)
+![community page](public/image-36.png)
 
 Track information:
 
-![Track information for Nydia Track](image-2.png)
+![Track information for Nydia Track](public/image-2.png)
 
 Join Button location:
 
-![Mobile nav menu](image-6.png)
+![Mobile nav menu](public/image-6.png)
 
 #### Consistency
 
@@ -465,11 +465,11 @@ Consistent design elements throughout:
 
 Consistent Design Elements:
 
-![comparing two pages design](image-37.png)
+![comparing two pages design](public/image-37.png)
 
 Footer on different pages:
 
-![footer on different pages](image-38.png)
+![footer on different pages](public/image-38.png)
 
 #### Simplicity
 
@@ -488,7 +488,7 @@ Clean, Uncluttered Design with simple navigation:
 
 Lots of white space for breathing room:
 
-![advice page](image-39.png)
+![advice page](public/image-39.png)
 
 #### Typography
 
@@ -502,11 +502,11 @@ Font system from theme configuration:
 
 Font size and weight hierarchy, line height and spacing optimized:
 
-![font hierarchy](image-40.png)
+![font hierarchy](public/image-40.png)
 
 Readable on mobile:
 
-![mobile](image-41.png)
+![mobile](public/image-41.png)
 
 #### Providing Feedback
 
@@ -520,7 +520,7 @@ User feedback mechanisms:
 
 Active states on navigation items:
 
-![active states](image-42.png)
+![active states](public/image-42.png)
 
 ## 4. Addressing Relevant Implications (at least three):
 
@@ -536,7 +536,7 @@ Ensure that the website addresses the relevant implications:
 
 Creative Commons attribution:
 
-![creative commons credits](image-43.png)
+![creative commons credits](public/image-43.png)
 
 ### Privacy/Confidentiality
 
@@ -552,11 +552,11 @@ Dedicated Privacy Policy section on homepage:
 
 Privacy Policy:
 
-![privacy policy](image-45.png)
+![privacy policy](public/image-45.png)
 
 Footer with link to privacy policy:
 
-![Footer with link to privacy policy](image-44.png)
+![Footer with link to privacy policy](public/image-44.png)
 
 ### Accessibility & Usability
 
@@ -572,11 +572,11 @@ Footer with link to privacy policy:
 
 Lighthouse accessibility benchmark results:
 
-![Lighthouse](image-34.png)
+![Lighthouse](public/image-34.png)
 
 Appropriatly sized mobile buttons:
 
-![Mobile Join Now button](image-5.png)
+![Mobile Join Now button](public/image-5.png)
 
 ### Aesthetics
 
@@ -591,11 +591,11 @@ Appropriatly sized mobile buttons:
 
 Consistent color scheme:
 
-![Wairou Lagoons, demonstrating consistent color scheme](image-3.png)
+![Wairou Lagoons, demonstrating consistent color scheme](public/image-3.png)
 
 Bottom edge of a card, with rounded corners, shadow, and white space:
 
-![bottom edge of a card](image-46.png)
+![bottom edge of a card](public/image-46.png)
 
 ### Functionality
 
@@ -612,11 +612,11 @@ All core features working:
 
 Modal appearing:
 
-![modal appearing](image-47.png)
+![modal appearing](public/image-47.png)
 
 Carousel with autoplay:
 
-![carousel changing](image-48.png)
+![carousel changing](public/image-48.png)
 
 ### Sustainability and Future-Proofing
 
@@ -634,11 +634,11 @@ Using modern, maintainable frameworks:
 
 Project File Structure:
 
-![file structure](image-49.png)
+![file structure](public/image-49.png)
 
 Dependencies in `package.json`:
 
-![dependencies](image-50.png)
+![dependencies](public/image-50.png)
 
 ### End-User Considerations
 
@@ -655,11 +655,11 @@ Features prioritizing end-users:
 
 Mobile Experience:
 
-![Mobile homepage](image-7.png)
+![Mobile homepage](public/image-7.png)
 
 FAQ section:
 
-![FAQ](image-51.png)
+![FAQ](public/image-51.png)
 
 ## 5. Applying User Experience (UX) Principles (at least two):
 
@@ -708,11 +708,11 @@ Evidence of refinement:
 
 TextEmblaCarousel (Card moves with the image) vs EmblaCarousel (Card stays still):
 
-![embla vs text](image-53.png)
+![embla vs text](public/image-53.png)
 
 Before and after adjustments of spacing:
 
-![bad vs good spacing](image-54.png)
+![bad vs good spacing](public/image-54.png)
 
 #### Experiment with different design elements (e.g., colour schemes, typography) to find the most effective combinations.
 
@@ -720,7 +720,7 @@ Before and after adjustments of spacing:
 
 Initial design used a generic color palette with basic blues and grays. After feedback (Sadly not from the stakeholder) and testing:
 
-- Original scheme: Standard blue (#0066cc) ![blue](image-61.png) with neutral grays
+- Original scheme: Standard blue (#0066cc) ![blue](public/image-61.png) with neutral grays
 - Final scheme: Catppuccin palette with nature-inspired greens
   - Primary green aligns with outdoor/nature theme
   - Improved contrast ratios for accessibility
@@ -735,7 +735,7 @@ The Catppuccin palette was chosen specifically because:
 
 Old vs new colour scheme:
 
-![changing colour scheme](image-55.png)
+![changing colour scheme](public/image-55.png)
 
 ##### Typography Experimentation
 
@@ -756,7 +756,7 @@ Font size adjustments based on testing:
 
 Subtle differences in font and font styles before and after adjustments:
 
-![before and after](image-62.png)
+![before and after](public/image-62.png)
 
 #### Incorporate Google Fonts for better typography and use normalize.css for consistent styling across browsers.
 
@@ -771,11 +771,11 @@ The application uses Google Fonts loaded via Next.js's optimized font system:
 
 Text Sample:
 
-![text sample](image-56.png)
+![text sample](public/image-56.png)
 
 Font Loading in DevTools:
 
-![dev tools font loading](image-57.png)
+![dev tools font loading](public/image-57.png)
 
 ##### Normalize.css / CSS Reset
 
@@ -787,7 +787,7 @@ Using HeroUI which includes its own normalization:
 
 Homepage on Vivaldi and Firefox:
 
-![firefox vs vivaldi](image-59.png)
+![firefox vs vivaldi](public/image-59.png)
 
 #### Apply design techniques like partial transparency, link state styling, and CSS Grid for a polished, professional look.
 
@@ -802,11 +802,11 @@ Used throughout for sophisticated effects:
 
 Carousel Navigation:
 
-![button](image-58.png)
+![button](public/image-58.png)
 
 Semi-transparent Modal:
 
-![modal appearing](image-47.png)
+![modal appearing](public/image-47.png)
 
 ##### Link State Styling
 
@@ -820,15 +820,15 @@ Multiple link states implemented:
 
 Normal button state:
 
-![normal button](image-19.png)
+![normal button](public/image-19.png)
 
 Hover button state (slightly darker):
 
-![hover button](image-20.png)
+![hover button](public/image-20.png)
 
 Clicked button state (Lighter circle propogates from cursor):
 
-![Clicked button](image-21.png)
+![Clicked button](public/image-21.png)
 
 ##### CSS Grid and Flexbox
 
@@ -842,11 +842,11 @@ Flexible layouts using modern CSS:
 
 Comparison of mobile and desktop card layout for the advice page:
 
-![Comparison of mobile and desktop card layout advice page](image-17.png)
+![Comparison of mobile and desktop card layout advice page](public/image-17.png)
 
 Examples of flex in DevTools:
 
-![flex in devtools](image-60.png)
+![flex in devtools](public/image-60.png)
 
 ## Excellence Level:
 
@@ -883,11 +883,11 @@ Progressive enhancement visible:
 
 Commit history showing progress:
 
-![history](image-63.png)
+![history](public/image-63.png)
 
 Feature Checklist (also at the top of this README):
 
-![checklist](image-64.png)
+![checklist](public/image-64.png)
 
 #### Regularly test and refine the website throughout the development process, keeping detailed records of all improvements made based on testing results.
 
@@ -902,11 +902,11 @@ The development process leveraged Vercel as the primary deployment and testing p
 
 Vercel Dashboard:
 
-![vercel](image-65.png)
+![vercel](public/image-65.png)
 
 Successful Deployment used for testing tracks page:
 
-![deployment](image-66.png)
+![deployment](public/image-66.png)
 
 ##### Real-World Testing Benefits
 
@@ -921,11 +921,11 @@ Actual Performance Metrics:
 
 Speed Insights (Cumulative Layout Shift is only bad because it tracks the movement of elements, and I have a carousel that moves elements around):
 
-![speed insights](image-67.png)
+![speed insights](public/image-67.png)
 
 Core Web Vitals, in DevTools:
 
-![core web vitals](image-68.png)
+![core web vitals](public/image-68.png)
 
 Analytics Integration:
 
@@ -936,7 +936,7 @@ Analytics Integration:
 
 Web Analytics:
 
-![analytics](image-69.png)
+![analytics](public/image-69.png)
 
 Mobile Device Testing:
 
@@ -948,7 +948,7 @@ Mobile Device Testing:
 
 Testing on Different Devices:
 
-![devices](image-70.png)
+![devices](public/image-70.png)
 
 ### Efficient Tools and Techniques:
 
@@ -1025,7 +1025,7 @@ Modern development environment indicated by:
 
 VSCodium Workspace:
 
-![workspace](image-71.png)
+![workspace](public/image-71.png)
 
 ##### Chrome DevTools
 
@@ -1038,7 +1038,7 @@ Testing and debugging evidence:
 
 Chrome DevTools:
 
-![devtools](image-72.png)
+![devtools](public/image-72.png)
 
 #### Optimize images using tools like https://tinypng.com/ to ensure fast loading times.
 
@@ -1050,11 +1050,11 @@ Images hosted on GitHub with optimization:
 
 Good Compression/File Size:
 
-![image file size](image-73.png)
+![image file size](public/image-73.png)
 
 Image loading times (Grovetown vineyard image takes a long time to load, but it is loaded lazily and is only shown as a later image in the carousel):
 
-![loading times](image-74.png)
+![loading times](public/image-74.png)
 
 #### Apply mobile-first design principles, ensuring the website is fully functional on mobile devices before scaling up to larger screens.
 
@@ -1068,15 +1068,15 @@ Clear mobile-first approach:
 
 Mobile Navigation Menu:
 
-![Mobile nav menu](image-6.png)
+![Mobile nav menu](public/image-6.png)
 
 Mobile Homepage:
 
-![Mobile homepage](image-7.png)
+![Mobile homepage](public/image-7.png)
 
 Comparison between mobile and desktop:
 
-![Mobile vs Desktop](image-16.png)
+![Mobile vs Desktop](public/image-16.png)
 
 #### Comment your code clearly to make it easier to understand and maintain.
 
@@ -1096,11 +1096,11 @@ This approach follows modern best practices: "Good code is its own best document
 
 Example of commented code (though sparse):
 
-![commented code](image-80.png)
+![commented code](public/image-80.png)
 
 Example of self-explanatory code with descriptive component names:
 
-![self-explanatory code](image-81.png)
+![self-explanatory code](public/image-81.png)
 
 #### Use descriptive class and ID names
 
@@ -1114,11 +1114,11 @@ Good code practices:
 
 Clear component structure:
 
-![clear code](image-75.png)
+![clear code](public/image-75.png)
 
 Type declarations:
 
-![declarations](image-76.png)
+![declarations](public/image-76.png)
 
 #### Validate HTML and CSS code
 
@@ -1151,15 +1151,15 @@ Advantages over W3C Validator:
 
 Successful Build with no Errors:
 
-![successful build](image-77.png)
+![successful build](public/image-77.png)
 
 Example of Type Error:
 
-![type error](image-78.png)
+![type error](public/image-78.png)
 
 Example of Build with Error:
 
-![build with error](image-79.png)
+![build with error](public/image-79.png)
 
 ## Evidence to be submitted:
 
@@ -1193,7 +1193,7 @@ This table shows that a lot of work was put into ensuring accessibility and func
 | 4 | Navigation menu | All Devices | Hamburger menu opens/closes | ✔ | Pass | - |
 | 5 | Theme switcher | All Devices | Switches between light/dark | ✔ | Pass | - |
 | 6 | Contact links | All Devices | Tel/mailto links work | ✔ | Pass | - |
-| 7 | Responsive layout | All Devices | Content adapts without overflow | ❌ | Fail | [Added overflow-x-hidden](https://github.com/sonicpanther101/school-website-2025/commit/27f896d47d0d5408a74f35646ddefa6d4b2a02af) ![change](image-82.png) |
+| 7 | Responsive layout | All Devices | Content adapts without overflow | ❌ | Fail | [Added overflow-x-hidden](https://github.com/sonicpanther101/school-website-2025/commit/27f896d47d0d5408a74f35646ddefa6d4b2a02af) ![change](public/image-82.png) |
 | 8 | Image loading | All Devices | Images load progressively | ✔ | Pass | - |
 | 9 | Form validation | All Devices | Email validation works | ✔ | Pass | - |
 | 10 | Accessibility | All Devices | All content accessible | ✔ | Pass | - |
@@ -1212,11 +1212,11 @@ Before and After screenshots:
 
 Homepage:
 
-![responsive layout fix homepage](image-83.png)
+![responsive layout fix homepage](public/image-83.png)
 
 Community:
 
-![responsive layout fix community](image-84.png)
+![responsive layout fix community](public/image-84.png)
 
 #### stakeholder feedback records
 
@@ -1227,7 +1227,7 @@ I understand that ideally there would be more feedback sessions, but this one pi
 
 | Date | Stakeholder | Feedback | Changes Made / Response |
 |------|------------|----------|-------------------------|
-| 19/9/2025 | Teacher | ![feedback](image-85.png) | Confirmed project direction was appropriate. Continued with planned development approach, implementing all planned features including responsive design, carousel functionality, and accessibility features as outlined in concept sketches. |
+| 19/9/2025 | Teacher | ![feedback](public/image-85.png) | Confirmed project direction was appropriate. Continued with planned development approach, implementing all planned features including responsive design, carousel functionality, and accessibility features as outlined in concept sketches. |
 | 29/9/2025 | Myself | Coming along well, but needs some colour | Added Catppuccin theme to the website and added some colour to the website |
 | 1/10/2025 | Dad | Looks good, but the community page is cut off when I look at it on my phone. It could also do with a favicon | Added overflow-x-hidden to the community page and added a favicon |
 | 2/10/2025 | Mum | Looks great, but the home page is off-center when I look at it on my phone | Added overflow-x-hidden to the home page (So silly that I missed it) |
