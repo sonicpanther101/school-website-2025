@@ -1,5 +1,7 @@
 # school-website-2025
 
+## Feature Checklist
+
 - [x] designs
 
 - [x] Pages:
@@ -28,13 +30,32 @@
   - [x] Dark mode
   - [x] Comments [elfsight](https://elfsightcdn.com)
 
-react framework - [NextJS](https://nextjs.org/docs/app/getting-started/installation)
+## How to Use Locally
 
-hero page design - [https://prismic.io/blog/website-hero-section](https://prismic.io/blog/website-hero-section)
+### Install dependencies
 
-palette - [catppuccin](https://www.npmjs.com/package/@catppuccin/palette)
+You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
-styling - [tailwind](https://tailwindcss.com/docs/)
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+## Technologies Used
+
+- React Framework: [Next.js 14](https://nextjs.org/docs/getting-started)
+- Hero Page Design: [https://prismic.io/blog/website-hero-section](https://prismic.io/blog/website-hero-section)
+- Styling: [Tailwind CSS](https://tailwindcss.com/)
+- Palette: [Catppuccin](https://www.npmjs.com/package/@catppuccin/palette)
+- Language: [TypeScript](https://www.typescriptlang.org/)
+- UI Library: [HeroUI v2](https://heroui.com/)
+- Animation Library: [Framer Motion](https://www.framer.com/motion/)
+- Theme Library: [next-themes](https://github.com/pacocoursey/next-themes)
 
 Some screenshots include the nextjs logo due to them being taken in dev mode, sometimes with some errors, these errors will be fixed in the final version.
 
@@ -1144,16 +1165,72 @@ Example of Build with Error:
 
 ### 1. Submit the completed website in zip format, containing HTML, CSS and media files
 
-### 2. A written description of how you addressed the relevant implications
+The website is hosted live at [https://school-website-2025.vercel.app/](https://school-website-2025.vercel.app/) and the source code is available in this GitHub repository, which provides easier examination than compiled files that would require local setup and dependency installation.
+
+GitHub Repository Structure:
+
+- `/pages` folder - All page components
+- `/components` folder - Reusable UI components
+- `/layouts` folder - Layout wrappers
+- `/config` folder - Site configuration
+- `tailwind.config.js` - Tailwind theme configuration
+- `package.json` - Dependencies and scripts
+- `README.md` - Writeup and notes for Setup and deployment instructions
+
+### 2. [A written description of how you addressed the relevant implications](#4-addressing-relevant-implications-at-least-three)
 
 ### 3. Records of how you completed data integrity and testing procedures when developing the website. This could include:
 
-#### a testing table
+#### A testing table
 
-#### annotated screenshots (eg showing the version of a webpage you tested and the changes made as a consequence of testing)
+This table shows that a lot of work was put into ensuring accessibility and functionality before testing begins. The responsive layout issue was fixed in the commit linked in the table.
 
-#### a video of no more than 3 minutes showing how you conducted the testing
+| Test # | Feature Tested | Device/Browser | Expected Result | Actual Result | Pass/Fail | Action Taken |
+|--------|---------------|----------------|-----------------|---------------|-----------|--------------|
+| 1 | Homepage loads | All Devices | Page displays with hero | ✔ | Pass | - |
+| 2 | Join Now modal | All Devices | Modal opens, email input works | ✔ | Pass | - |
+| 3 | Carousel autoplay | All Devices | Images rotate automatically | ✔ | Pass | - |
+| 4 | Navigation menu | All Devices | Hamburger menu opens/closes | ✔ | Pass | - |
+| 5 | Theme switcher | All Devices | Switches between light/dark | ✔ | Pass | - |
+| 6 | Contact links | All Devices | Tel/mailto links work | ✔ | Pass | - |
+| 7 | Responsive layout | All Devices | Content adapts without overflow | ❌ | Fail | [Added overflow-x-hidden](https://github.com/sonicpanther101/school-website-2025/commit/27f896d47d0d5408a74f35646ddefa6d4b2a02af) ![change](image-82.png) |
+| 8 | Image loading | All Devices | Images load progressively | ✔ | Pass | - |
+| 9 | Form validation | All Devices | Email validation works | ✔ | Pass | - |
+| 10 | Accessibility | All Devices | All content accessible | ✔ | Pass | - |
+
+Responsive layout is a common issue with websites, and was the most time-consuming aspect of development. Creating a website that looks good and functions properly across the enormous range of device sizes - from 320px mobile phones to 4K desktop monitors - is an incredibly complex challenge that requires constant testing and refinement.
+
+Common issues included:
+
+- Text overflow on smaller screens
+- Images not scaling properly
+- Navigation elements overlapping
+- Cards and containers breaking out of viewport width
+- Inconsistent spacing across breakpoints
+
+Before and After screenshots:
+
+Homepage:
+
+![responsive layout fix homepage](image-83.png)
+
+Community:
+
+![responsive layout fix community](image-84.png)
 
 #### stakeholder feedback records
 
-#### screenshots of completed validation procedures etc
+Unfortunately, due to timing constraints and the holiday period, only a single piece of feedback from Mrs Searle (Stakeholder) was collected.
+The single bit of feedback from Mrs Searle (Stakeholder) validated the project direction and methodology, allowing confident progression through the remaining development phases.
+
+I understand that ideally there would be more feedback sessions, but this one piece of feedback shows that my project was heading in the right direction during the important planning and early development stages. The positive comments on my concept sketches and incremental development gave me confidence to keep going with the merit and excellence level work.
+
+| Date | Stakeholder | Feedback | Changes Made / Response |
+|------|------------|----------|-------------------------|
+| 19/9/2025 | Teacher | ![feedback](image-85.png) | Confirmed project direction was appropriate. Continued with planned development approach, implementing all planned features including responsive design, carousel functionality, and accessibility features as outlined in concept sketches. |
+| 29/9/2025 | Myself | Coming along well, but needs some colour | Added Catppuccin theme to the website and added some colour to the website |
+| 1/10/2025 | Dad | Looks good, but the community page is cut off when I look at it on my phone. It could also do with a favicon | Added overflow-x-hidden to the community page and added a favicon |
+| 2/10/2025 | Mum | Looks great, but the home page is off-center when I look at it on my phone | Added overflow-x-hidden to the home page (So silly that I missed it) |
+| 3/10/2025 | Oli | Looks even better than the website you made last year. I'm really impressed, but the font is very basic. | Changed font to Roboto |
+
+#### [screenshots of completed validation procedures etc](#validate-html-and-css-code)
